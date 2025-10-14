@@ -1,10 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { useSearchParams } from "react-router-dom";
 import ProjectsGrid from "../components/projects/ProjectsGrid";
 import FilterBar from "../components/projects/FilterBar";
 
 const Projects = () => {
-  const [selectedTheme, setSelectedTheme] = useState("All");
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  // Extract initial filter values from URL if available
+  const initialTheme = searchParams.get("theme") || "All";
+  const initialTitle = searchParams.get("title") || "";
+
+  const [selectedTheme, setSelectedTheme] = useState(initialTheme);
+  const [searchTitle, setSearchTitle] = useState(initialTitle);
+
+  // Sync state changes to query params
+  useEffect(() => {
+    const params = {};
+    if (selectedTheme && selectedTheme !== "All") params.theme = selectedTheme;
+    if (searchTitle.trim()) params.title = searchTitle.trim();
+
+    setSearchParams(params);
+  }, [selectedTheme, searchTitle, setSearchParams]);
 
   return (
     <div className="bg-gray-50 min-h-screen">
@@ -28,10 +45,15 @@ const Projects = () => {
       </section>
 
       {/* Filter Bar */}
-      <FilterBar selectedTheme={selectedTheme} setSelectedTheme={setSelectedTheme} />
+      <FilterBar
+        selectedTheme={selectedTheme}
+        setSelectedTheme={setSelectedTheme}
+        searchTitle={searchTitle}
+        setSearchTitle={setSearchTitle}
+      />
 
       {/* Projects Grid */}
-      <ProjectsGrid selectedTheme={selectedTheme} />
+      <ProjectsGrid selectedTheme={selectedTheme} searchTitle={searchTitle} />
     </div>
   );
 };

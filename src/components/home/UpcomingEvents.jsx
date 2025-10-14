@@ -1,58 +1,59 @@
-import React from "react";
-import { CalendarDays, MapPin } from "lucide-react";
+import React, { useState, useEffect } from "react";
+import { CalendarDays, MapPin, Loader2 } from "lucide-react";
 import { motion } from "framer-motion";
+import { getData } from "../../services/apiService";
 
-const events = [
-  {
-    id: "1",
-    title: "Nakuru Tree Drive",
-    description:
-      "Join YGAK volunteers in Nakuru County for a community-led tree planting drive. This event brings together youth, schools, and local communities to restore the environment and promote climate resilience.",
-    county: "Nakuru",
-    subCounty: "Nakuru East",
-    latitude: -0.3031,
-    longitude: 36.0800,
-    isApproved: true,
-    date: "2025-11-10",
-    flyer: "/bg_image.jpg",
-  },
-  {
-    id: "2",
-    title: "Youth Climate Forum 2025",
-    description:
-      "An inspiring youth-centered climate action forum organized by YGAK, bringing together environmental experts, students, and county representatives to discuss sustainable solutions and policy engagement.",
-    county: "Nairobi",
-    subCounty: "Westlands",
-    latitude: -1.2667,
-    longitude: 36.8333,
-    isApproved: true,
-    date: "2025-12-05",
-    flyer: "/main.jpg",
-  },
-  {
-    id: "3",
-    title: "Rift Valley Greening Schools Initiative Launch",
-    description:
-      "YGAK officially launches its Greening Schools Initiative across Rift Valley schools. Students will engage in hands-on environmental learning through tree planting and sustainable gardening programs.",
-    county: "Uasin Gishu",
-    subCounty: "Eldoret East",
-    latitude: 0.5204,
-    longitude: 35.2698,
-    isApproved: true,
-    date: "2025-10-25",
-    flyer: "background.JPG",
-  },
-];
 
 const UpcomingEvents = () => {
+  const [events, setEvents] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const getTodayDate = () => {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+    const day = String(today.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  };
+
+  const getEvents = async () => {
+    try {
+      setLoading(true);
+      const todayDate = getTodayDate();
+      const endpoint = "upcoming-events";
+      const params = {
+        page: 1,
+        limit: 3,
+        date: todayDate
+      };
+      const response = await getData(endpoint, params);
+      setEvents(response?.data?.data || []);
+    } catch (error) {
+      console.error("Error fetching events:", error);
+      setEvents([]);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    getEvents();
+  }, []);
+
   return (
     <section className="py-20 bg-gray-50 text-center">
       <h2 className="text-3xl font-bold text-[#1B5E20] mb-10">
         Upcoming Events
       </h2>
 
-      {events.length === 0 ? (
-        <p className="text-gray-600">No upcoming events at the moment.</p>
+      {loading ? (
+        <div className="flex justify-center items-center h-40">
+          <Loader2 size={36} className="animate-spin text-[#1B5E20]" />
+        </div>
+      ) : events.length === 0 ? (
+        <p className="text-gray-600">
+          No upcoming events at the moment. Check back soon!
+        </p>
       ) : (
         <div className="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-10 px-6">
           {events.map((event, i) => (
@@ -64,7 +65,6 @@ const UpcomingEvents = () => {
               viewport={{ once: true }}
               className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 text-left overflow-hidden flex flex-col"
             >
-              {/* Event Flyer */}
               {event.flyer ? (
                 <img
                   src={event.flyer}
@@ -77,7 +77,6 @@ const UpcomingEvents = () => {
                 </div>
               )}
 
-              {/* Event Info */}
               <div className="p-5 flex-grow">
                 <h3 className="font-semibold text-lg text-[#1B5E20] mb-1">
                   {event.title}
@@ -99,7 +98,6 @@ const UpcomingEvents = () => {
                 </p>
               </div>
 
-              {/* Action Button */}
               <div className="px-5 pb-5">
                 <a
                   href={`/events/${event.id}`}
@@ -113,7 +111,6 @@ const UpcomingEvents = () => {
         </div>
       )}
 
-      {/* CTA */}
       <a
         href="/events"
         className="mt-12 inline-block bg-[#1B5E20] hover:bg-[#145A24] text-white px-6 py-3 rounded-full font-semibold shadow-md transition"

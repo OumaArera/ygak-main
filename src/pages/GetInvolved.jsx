@@ -1,12 +1,72 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Heart, Users, ArrowDownCircle } from "lucide-react";
+import { Heart, Users, ArrowDownCircle, Loader2 } from "lucide-react"; 
 import DonateModal from "../components/home/DonateModal";
+import Notification from '../components/common/Notification'; 
 import VolunteerFormModal from "../components/home/VolunteerFormModal";
+import { createData } from "../services/apiService";
 
 const GetInvolved = () => {
   const [showDonateModal, setShowDonateModal] = useState(false);
   const [showVolunteerModal, setShowVolunteerModal] = useState(false);
+  const [isVolunteerSubmitting, setIsVolunteerSubmitting] = useState(false);
+  const [notification, setNotification] = useState({
+    isVisible: false,
+    message: "",
+    type: "success",
+  });
+
+  const showNotification = (message, type = "success") => {
+    setNotification({
+      isVisible: true,
+      message,
+      type,
+    });
+  };
+
+  const closeNotification = () => {
+    setNotification({ ...notification, isVisible: false });
+  };
+
+  const handleVolunteerSubmit = async (formData) => {
+    setIsVolunteerSubmitting(true);
+    const endpoint = "volunteers"; 
+
+    try {
+      const response = await createData(endpoint, formData);
+      console.log("Response: ", JSON.stringify(response));
+      console.log("Payload", JSON.stringify(formData))
+      
+      if (response.success) {
+        showNotification("Your volunteer application has been submitted successfully!", "success");
+        setShowVolunteerModal(false);
+      } else {
+        if (response.error === "Validation error" && Array.isArray(response.details) && response.details.length > 0) {
+          
+          const firstDetail = response.details[0];
+          let userMessage = `Error in ${firstDetail.field}: ${firstDetail.message}.`;
+          
+          if (firstDetail.field === "phoneNumber" && firstDetail.message.includes("unique")) {
+             userMessage = "This phone number is already registered. Please check the number or use a different one.";
+          } 
+          else if (response.details.length > 1) {
+              userMessage = `Multiple errors found: ${response.details.length} fields failed validation. Please review your input.`;
+          }
+
+          showNotification(userMessage, "error");
+
+        } else {
+          const errorMessage = response.message || "Submission failed. Please check your data and try again.";
+          showNotification(errorMessage, "error");
+        }
+      }
+    } catch (error) {
+      console.error("Volunteer submission error:", error);
+      showNotification("An unexpected error occurred. Please check your connection and try again.", "error");
+    } finally {
+      setIsVolunteerSubmitting(false);
+    }
+};
 
   return (
     <div className="bg-gray-50 min-h-screen relative">
@@ -32,16 +92,13 @@ const GetInvolved = () => {
 
       {/* Interactive Action Cards */}
       <section className="max-w-6xl mx-auto py-20 px-6 grid md:grid-cols-2 gap-10">
-        {/* Donate Card - Animation Removed */}
+        {/* Donate Card */}
         <motion.div
-          // Removed: whileHover={{ scale: 1.05 }}
-          // Removed: transition={{ type: "spring", stiffness: 150, damping: 10 }}
           className="bg-white rounded-2xl shadow-xl p-10 text-center relative overflow-hidden group"
         >
-          {/* Overlay - z-10 added for proper stacking */}
           <div className="absolute inset-0 bg-gradient-to-br from-green-50 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 z-10" />
           
-          <div className="relative z-20"> {/* New container to lift content above overlay */}
+          <div className="relative z-20">
             <Heart
               size={60}
               className="mx-auto text-green-600 mb-4 group-hover:text-green-700 transition"
@@ -62,14 +119,13 @@ const GetInvolved = () => {
           </div>
         </motion.div>
 
-        {/* Volunteer Card - Animation Removed */}
+        {/* Volunteer Card */}
         <motion.div
           className="bg-white rounded-2xl shadow-xl p-10 text-center relative overflow-hidden group"
         >
-          {/* Overlay - z-10 added for proper stacking */}
           <div className="absolute inset-0 bg-gradient-to-br from-green-50 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 z-10" />
           
-          <div className="relative z-20"> {/* New container to lift content above overlay */}
+          <div className="relative z-20">
             <Users
               size={60}
               className="mx-auto text-green-600 mb-4 group-hover:text-green-700 transition"
@@ -82,8 +138,16 @@ const GetInvolved = () => {
             <button
               onClick={() => setShowVolunteerModal(true)}
               className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition"
+              disabled={isVolunteerSubmitting}
             >
-              Register Now
+              {isVolunteerSubmitting ? (
+                <div className="flex items-center space-x-2">
+                  <Loader2 size={20} className="animate-spin" />
+                  <span>Submitting...</span>
+                </div>
+              ) : (
+                "Register Now"
+              )}
             </button>
           </div>
         </motion.div>
@@ -136,8 +200,18 @@ const GetInvolved = () => {
         <VolunteerFormModal
           isOpen={showVolunteerModal}
           onClose={() => setShowVolunteerModal(false)}
+          onSubmit={handleVolunteerSubmit} 
+          isSubmitting={isVolunteerSubmitting} 
         />
       )}
+
+      {/* Notification Component */}
+      <Notification 
+        message={notification.message}
+        type={notification.type}
+        isVisible={notification.isVisible}
+        onClose={closeNotification}
+      />
     </div>
   );
 };
