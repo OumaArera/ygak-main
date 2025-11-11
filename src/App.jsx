@@ -15,6 +15,11 @@ import ResourceLibrary from "./pages/ResourceLibrary";
 import GetInvolved from './pages/GetInvolved';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
+import OurStory from './components/about/OurStory';
+import LeadershipTeam from './components/about/LeadershipTeam';
+import DonorsAndPartners from './components/about/DonorsAndPartners';
+import ImpactStories from './components/about/ImpactStories';
+
 
 
 function App() {
@@ -26,17 +31,20 @@ function App() {
           <Routes>
             {/* Define routes here */}
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/projects/:id" element={<ProjectDetails />} />
+            <Route path='/about/our-story' element={<OurStory />} />
+            <Route path="/about/management-team" element={<LeadershipTeam />} />
+            <Route path="/about/donors-and-partners" element={<DonorsAndPartners />} />
+            <Route path="/about/impact-stories" element={<ImpactStories />} />
+            <Route path="/activities/projects" element={<Projects />} />
+            <Route path="/activities/projects/:id" element={<ProjectDetails />} />
             <Route path="/media" element={<MediaCenter />} />
             <Route path="/media/press/:id" element={<PressReleaseDetails />} />
-            <Route path="/events" element={<Events />} />
-            <Route path="/events/:id" element={<EventDetails />} />
-            <Route path="/resources" element={<ResourceLibrary />} />
-            <Route path="/get-involved" element={<GetInvolved />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:id" element={<BlogPost />} />
+            <Route path="/activities/events" element={<Events />} />
+            <Route path="/activities/events/:id" element={<EventDetails />} />
+            <Route path="/resources/publications" element={<ResourceLibrary />} />
+            <Route path="/get-involved/donate" element={<GetInvolved />} />
+            <Route path="/resources/blogs" element={<Blog />} />
+            <Route path="/resources/blogs/:id" element={<BlogPost />} />
           </Routes>
         </main>
         <Footer />

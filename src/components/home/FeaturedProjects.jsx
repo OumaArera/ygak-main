@@ -47,59 +47,69 @@ const projects = [
     description:
       "In partnership with German Imaging Technologies, YGAK mobilized 300+ volunteers to plant 100,000 trees across Mau Forest in just five days—one of Kenya’s largest youth-led reforestation drives.",
   },
-  
 ];
 
 const FeaturedProjects = () => {
+  // Only show first 3 projects on desktop, 2 on mobile
+  const visibleProjects = projects.slice(0, 3);
+
   return (
-    <section className="py-20 bg-gray-50 text-center">
-      <h2 className="text-3xl font-bold text-[#1B5E20] mb-10">
-        Our Impact Projects
-      </h2>
-      <div className="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-10 px-6">
-        {projects.map((p, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.2 }}
-            viewport={{ once: true }}
-            className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-4 flex flex-col"
-          >
-            {/* Embedded YouTube Video */}
-            <div className="relative w-full h-56 mb-4 rounded-lg overflow-hidden">
-              <iframe
-                src={p.videoUrl}
-                title={p.title}
-                className="absolute top-0 left-0 w-full h-full rounded-lg"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
+    <section className="py-20 bg-gray-50 text-center relative overflow-hidden">
+      {/* Subtle background accents */}
+      <div className="absolute inset-0 bg-gradient-to-b from-green-50 via-white to-gray-100 opacity-70"></div>
 
-            {/* Content */}
-            <h3 className="font-semibold text-lg text-[#1B5E20] mb-1">
-              {p.title}
-            </h3>
-            <p className="text-sm text-gray-600 italic mb-2">
-              {p.location} • {p.date}
-            </p>
-            <p className="text-gray-700 text-sm leading-relaxed mb-3">
-              {p.description}
-            </p>
-            <p className="font-medium text-green-700">{p.metric}</p>
-          </motion.div>
-        ))}
+      <div className="relative z-10">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-[#1B5E20] mb-12">
+          Our Impact Projects
+        </h2>
+
+        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-6">
+          {visibleProjects.map((p, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.2 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-4 flex flex-col hover:-translate-y-1"
+            >
+              {/* Embedded YouTube Video */}
+              <div className="relative w-full h-56 mb-4 rounded-xl overflow-hidden">
+                <iframe
+                  src={p.videoUrl}
+                  title={p.title}
+                  className="absolute top-0 left-0 w-full h-full rounded-xl"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+
+              {/* Content */}
+              <h3 className="font-semibold text-lg text-[#1B5E20] mb-1">
+                {p.title}
+              </h3>
+              <p className="text-sm text-gray-600 italic mb-2">
+                {p.location} • {p.date}
+              </p>
+              <p className="text-gray-700 text-sm leading-relaxed mb-3">
+                {p.description}
+              </p>
+              <p className="font-medium text-green-700 mt-auto">
+                {p.metric}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* CTA */}
+        <a
+          href="/about/impact-stories"
+          className="mt-12 inline-block bg-[#1B5E20] hover:bg-[#145A24] text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition duration-300"
+        >
+          View All Stories
+        </a>
       </div>
-
-      {/* CTA */}
-      <a
-        href="/projects"
-        className="mt-12 inline-block bg-[#1B5E20] hover:bg-[#145A24] text-white px-6 py-3 rounded-full font-semibold shadow-md transition"
-      >
-        View All Impact Projects
-      </a>
     </section>
   );
 };
