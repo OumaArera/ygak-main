@@ -22,7 +22,7 @@ const BlogCard = ({ post }) => (
       </p>
       <p className="text-gray-700 mb-4 text-sm flex-grow line-clamp-3">{post.excerpt}</p>
       <Link
-        to={`/blog/${post.id}`}
+        to={`/resources/blog/${post.id}`}
         className="inline-block text-green-700 font-semibold hover:underline mt-auto"
       >
         Read More →

@@ -75,18 +75,16 @@ const Footer = () => {
       section: "Policies",
       links: [
         { name: "Privacy Policy", href: "/privacy-policy" },
-        { name: "Donor & Partner Policies", href: "/policies" },
+        { name: "Donor & Partner Policies", href: "/resources/donor-and-partner-statement" },
       ],
     },
   ];
 
   return (
-    <footer className="bg-[#1B5E20] text-white mt-16 relative overflow-hidden">
-      {/* Decorative overlay */}
+    <footer className="bg-[#1B5E20] text-white mt-0 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-t from-[#145A24]/90 to-transparent pointer-events-none"></div>
 
       <div className="relative max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-4 gap-10">
-        {/* Column 1: Logo & About */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -109,7 +107,6 @@ const Footer = () => {
           </p>
         </motion.div>
 
-        {/* Column 2: Quick Links */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -140,7 +137,6 @@ const Footer = () => {
           </div>
         </motion.div>
 
-        {/* Column 3: Contact */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -166,7 +162,6 @@ const Footer = () => {
           </ul>
         </motion.div>
 
-        {/* Column 4: Socials & Newsletter */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -179,23 +174,26 @@ const Footer = () => {
           <p className="text-sm text-green-50 mb-3">
             Subscribe for updates on our projects and events.
           </p>
+
+          {/* MOBILE-FRIENDLY FIX: ensure input can shrink and button keeps a minimum width */}
           <form
             onSubmit={(e) => e.preventDefault()}
-            className="flex items-center bg-white/10 rounded-full overflow-hidden mb-4"
+            className="flex items-center bg-white/10 rounded-full mb-4 w-full"
           >
             <input
               type="email"
               placeholder="Your Email"
-              className="flex-grow px-3 py-2 bg-transparent text-white placeholder-green-200 focus:outline-none"
+              className="flex-grow min-w-0 px-3 py-2 bg-transparent text-white placeholder-green-200 focus:outline-none"
               required
             />
             <button
               type="submit"
-              className="bg-[#2E7D32] hover:bg-[#145A24] text-white font-semibold px-4 py-2 rounded-r-full transition duration-300"
+              className="bg-[#2E7D32] hover:bg-[#145A24] text-white font-semibold px-4 py-2 rounded-full ml-2 transition duration-300 whitespace-nowrap min-w-[110px]"
             >
               Subscribe
             </button>
           </form>
+
           <div className="flex space-x-4">
             {socialLinks.map((social) => (
               <motion.a
@@ -215,10 +213,8 @@ const Footer = () => {
         </motion.div>
       </div>
 
-      {/* Divider */}
       <div className="border-t border-white/10"></div>
 
-      {/* Bottom Section */}
       <div className="relative max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center text-sm text-green-50">
         <p>
           &copy; {new Date().getFullYear()} Youths for Green Action Kenya. All

@@ -17,7 +17,7 @@ const VolunteerFormModal = ({ isOpen, onClose, onSubmit, isSubmitting }) => {
     email: "",
     nextOfKinName: "",
     nextOfKinPhoneNumber: "",
-    nextOfKinEmail: "", // Optional field
+    nextOfKinEmail: "", 
     isStudent: false,
     institutionId: "",
     schoolRegNumber: "",
