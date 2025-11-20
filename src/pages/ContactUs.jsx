@@ -45,7 +45,11 @@ const ContactUs = () => {
             </div>
             <div className="flex items-center space-x-2">
               <Mail className="text-[#1B5E20]" />
-              <span>info@yfgak.org</span>
+              <span>info@ygak.org</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Mail className="text-[#1B5E20]" />
+              <span>youthsaction31@gmail.com</span>
             </div>
           </div>
 

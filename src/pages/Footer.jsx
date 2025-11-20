@@ -94,7 +94,7 @@ const Footer = () => {
           <div className="flex items-center space-x-3 mb-4">
             <img
               src={logo}
-              alt="YFGAK Logo"
+              alt="YGAK Logo"
               className="w-14 h-14 object-contain rounded-full border border-white/40 shadow-sm"
             />
             <h2 className="font-bold text-lg text-green-100">
@@ -157,7 +157,7 @@ const Footer = () => {
             </li>
             <li className="flex items-start space-x-2">
               <Mail size={18} className="mt-1 text-yellow-300" />
-              <span>info@yfgak.org</span>
+              <span>info@ygak.org</span>
             </li>
           </ul>
         </motion.div>

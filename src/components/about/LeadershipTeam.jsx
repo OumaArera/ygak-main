@@ -46,7 +46,7 @@ const boardMembers = [
     image: "/Judith Ikonya.jpg",
   },
   {
-    name: "Kelvin Honest",
+    name: "Kelvin Mworia",
     role: "Board Member",
     description:
       "Advises on strategic partnerships and sustainability programs, strengthening YGAK’s national and regional collaborations.",

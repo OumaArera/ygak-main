@@ -94,39 +94,39 @@ const Header = () => {
         scrolled ? "bg-white shadow-md" : "bg-[#1c4b28]"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-<motion.div
-  initial={{ opacity: 0, y: -20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6 }}
-  className="flex items-center space-x-3 cursor-pointer md:-ml-6 lg:-ml-10"
->
-  <Link to="/" className="flex items-center space-x-3">
-    <img
-      src={logo}
-      alt="YFGAK Logo"
-      className="w-14 h-14 object-contain rounded-full border-2 border-white/50 shadow-sm"
-    />
-    <div>
-      <h1
-        className={`text-xl md:text-2xl font-bold transition-colors duration-300 ${
-          scrolled ? "text-[#1c4b28]" : "text-white"
-        }`}
-      >
-        Youths for Green Action Kenya
-      </h1>
-      <p
-        className={`text-xs font-medium tracking-wide transition-colors duration-300 ${
-          scrolled ? "text-gray-600" : "text-gray-100"
-        }`}
-      >
-        Action for Sustainable Development
-      </p>
-    </div>
-  </Link>
-</motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="flex items-center space-x-3 cursor-pointer md:-ml-6 lg:-ml-10"
+          >
+            <Link to="/" className="flex items-center space-x-3">
+              <img
+                src={logo}
+                alt="YFGAK Logo"
+                className="w-14 h-14 object-contain rounded-full border-2 border-white/50 shadow-sm"
+              />
+              <div>
+                <h1
+                  className={`text-xl md:text-2xl font-bold transition-colors duration-300 ${
+                    scrolled ? "text-[#1c4b28]" : "text-white"
+                  }`}
+                >
+                  Youths for Green Action Kenya
+                </h1>
+                <p
+                  className={`text-xs font-medium tracking-wide transition-colors duration-300 ${
+                    scrolled ? "text-gray-600" : "text-gray-100"
+                  }`}
+                >
+                  Action for Sustainable Development
+                </p>
+              </div>
+            </Link>
+          </motion.div>
 
 
           {/* Desktop Navigation */}

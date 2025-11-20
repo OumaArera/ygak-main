@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import DonateModal from "./DonateModal";
 import VolunteerFormModal from "./VolunteerFormModal";
 
 const CTASection = () => {
   const [showDonateModal, setShowDonateModal] = useState(false);
   const [showVolunteerModal, setShowVolunteerModal] = useState(false);
+  const navigate = useNavigate()
 
   return (
     <section className="relative py-16 bg-[#145A24] text-center overflow-hidden">
@@ -23,7 +25,7 @@ const CTASection = () => {
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           {/* Volunteer Button */}
           <button
-            onClick={() => setShowVolunteerModal(true)}
+            onClick={() => navigate("/get-involved/volunteer")}
             className="bg-white text-[#145A24] hover:bg-green-50 px-6 py-3 rounded-full font-semibold shadow-lg transition"
           >
             Become a Volunteer
@@ -31,7 +33,7 @@ const CTASection = () => {
 
           {/* Donate Button */}
           <button
-            onClick={() => setShowDonateModal(true)}
+            onClick={()=> navigate("/get-involved/donate")}
             className="bg-yellow-400 hover:bg-yellow-500 text-[#145A24] px-6 py-3 rounded-full font-semibold shadow-lg transition"
           >
             Donate Now

@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { MapPin, Calendar, Leaf } from "lucide-react";
+import CountUp from "react-countup";
 
 const impactStories = [
   {
@@ -158,10 +159,10 @@ const ImpactStories = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
             {[
-              { number: "500,000+", label: "Trees Planted" },
-              { number: "12+", label: "Counties Engaged" },
-              { number: "60+", label: "Schools Reached" },
-              { number: "8,000+", label: "Youth Empowered" },
+              { number: 700000, label: "Trees Planted" },
+              { number: 18, label: "Counties Engaged" },
+              { number: 60, label: "Schools Reached" },
+              { number: 8000, label: "Youth Empowered" },
             ].map((stat, i) => (
               <motion.div
                 key={i}
@@ -171,13 +172,22 @@ const ImpactStories = () => {
                 viewport={{ once: true }}
                 className="flex flex-col items-center"
               >
-                <p className="text-4xl font-bold mb-2">{stat.number}</p>
+                <CountUp start={0} end={stat.number} duration={3}>
+                  {({ countUpRef }) => (
+                    <span
+                      ref={countUpRef}
+                      className="text-4xl font-bold mb-2 text-yellow-300"
+                    />
+                  )}
+                </CountUp>
+
                 <p className="text-green-100">{stat.label}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </div>
+
 
       {/* Call to Action */}
       <motion.div
