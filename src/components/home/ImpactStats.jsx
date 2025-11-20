@@ -19,6 +19,8 @@ const ImpactStats = () => {
               start={0}
               end={s.value}
               duration={3}
+              enableScrollSpy
+              scrollSpyOnce
             >
               {({ countUpRef }) => (
                 <span

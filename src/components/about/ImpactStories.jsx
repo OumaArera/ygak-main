@@ -172,7 +172,13 @@ const ImpactStories = () => {
                 viewport={{ once: true }}
                 className="flex flex-col items-center"
               >
-                <CountUp start={0} end={stat.number} duration={3}>
+                <CountUp
+                  start={0}
+                  end={stat.number}
+                  duration={3}
+                  enableScrollSpy
+                  scrollSpyOnce
+                >
                   {({ countUpRef }) => (
                     <span
                       ref={countUpRef}
@@ -187,6 +193,7 @@ const ImpactStories = () => {
           </div>
         </div>
       </div>
+
 
 
       {/* Call to Action */}
