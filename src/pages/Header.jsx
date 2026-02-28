@@ -40,7 +40,7 @@ const Header = () => {
       subItems: [
         { name: "Projects", path: "/projects" },
         { name: "Programs", path: "/programs" },
-        { name: "Initiatives", path: "/inititives" },
+        { name: "Initiatives", path: "/initiatives" },
         { name: "Events", path: "/events" },
       ],
     },

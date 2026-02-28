@@ -1,0 +1,1139 @@
+export const projects = [
+        {
+        "id": "proj_kakamega_2022_001",
+        "title": "Kakamega Tree Planting Initiative 2022",
+        "slug": "future-in-a-million-trees-kakamega-2022",
+        "image": "/greening-school.jpg",
+        "theme": "Afforestation",
+        "projectTheme": "Future in a Million Trees",
+        "description": "A four-day environmental conservation initiative conducted in Kakamega County focused on planting 10,000 tree seedlings, strengthening community participation, youth empowerment, and environmental awareness aligned with SDG 13 on Climate Action.",
+        "location": {
+            "country": "Kenya",
+            "county": "Kakamega",
+            "subCounties": ["Shinyalu", "Ikolomani", "Lurambi"],
+            "specificSites": [
+            "Bondeni Primary School",
+            "Kambiri Community (River Nandamanywa – Ingolomosio Village)",
+            "Shitoli Polytechnic",
+            "St Jerome Savane Polytechnic"
+            ]
+        },
+        "duration": {
+            "startDate": "2022-05-26",
+            "endDate": "2022-05-29"
+        },
+        "status": "completed",
+        "projectPurpose": "To plant 10,000 tree seedlings and promote sustainable environmental conservation practices through community participation and youth engagement.",
+        "objectives": [
+            "To promote local participation and sustainable use of the environment in Kakamega County.",
+            "To promote the culture of volunteerism and community service.",
+            "To enhance youth empowerment and development."
+        ],
+        "implementationApproach": {
+            "methodology": "Participatory community engagement model",
+            "volunteerInvolvement": {
+            "totalVolunteers": 120,
+            "sources": [
+                "Youths For Green Action Kenya",
+                "Masinde Muliro University of Science and Technology (MMUST)"
+            ]
+            },
+            "activities": [
+            "Tree planting",
+            "Environmental awareness campaigns",
+            "Capacity building workshop",
+            "Training on toner cartridge collection and handling",
+            "Community sensitization on sustainable development"
+            ]
+        },
+        "treePlantingStatistics": {
+            "totalSeedlingsPlanted": 10000,
+            "indigenousTrees": 4000,
+            "exoticTrees": 5700,
+            "fruitTrees": 300,
+            "siteBreakdown": [
+            {
+                "site": "Bondeni Primary School",
+                "treesPlanted": 1500,
+                "fruitTreesIncluded": true
+            },
+            {
+                "site": "Kambiri Community",
+                "treesPlanted": 5000,
+                "focus": "River restoration and indigenous tree replacement"
+            },
+            {
+                "site": "Shitoli Polytechnic",
+                "treesPlanted": 2000,
+                "fruitTreesIncluded": 100
+            },
+            {
+                "site": "St Jerome Savane Polytechnic",
+                "treesPlanted": 1500
+            }
+            ]
+        },
+        "partners": [
+            {
+            "name": "German Imaging Technologies (GIT)",
+            "role": "Funding and environmental training support",
+            "keyRepresentative": "Dr. Sassan Dieter Khatib-Shahidi"
+            },
+            {
+            "name": "Kakamega County Government",
+            "department": "Department of Environment",
+            "keyRepresentative": "Mr. Eugine Milimo Wamalwa"
+            },
+            {
+            "name": "National Environment Management Authority (NEMA)",
+            "keyRepresentative": "Mr. John Maniafu"
+            },
+            {
+            "name": "Masinde Muliro University of Science and Technology (MMUST)",
+            "keyRepresentative": "Mr. Oscar Waswa"
+            }
+        ],
+        "mediaCoverage": [
+            "Tandaza Radio",
+            "Luhya TV",
+            "KTN News",
+            "Radio Maisha",
+            "Standard Newspaper",
+            "Citizen TV",
+            "West FM",
+            "West TV",
+            "Nyota Radio",
+            "Nyota TV"
+        ],
+        "challengesExperienced": [
+            "Late booking of facilities threatened project preparation timelines.",
+            "Short project execution period limited operational flexibility."
+        ],
+        "impact": {
+            "environmentalImpact": "Contributed to increased tree cover and river restoration efforts.",
+            "communityImpact": "Enhanced environmental awareness and strengthened community participation.",
+            "cumulativeTreesPlantedByOrganization": 82000
+        },
+        "alignment": {
+            "sdg": ["SDG 13 - Climate Action"],
+            "nationalGoal": "Support Kenya’s target of achieving 10% forest cover."
+        },
+        "createdAt": "2022-05-30T10:00:00Z",
+        "updatedAt": "2022-05-30T10:00:00Z"
+        },
+        {
+            "id": "proj_kisumu_2022_001",
+            "title": "Kisumu Community Service and Team Building 2022",
+            "slug": "future-in-a-million-trees-kisumu-2022",
+            "image": "/lenana.jpg",
+            "theme": "Afforestation",
+            "projectTheme": "Future in a Million Trees",
+            "description": "A three-day environmental conservation and community service initiative conducted in Kisumu City focused on planting 5,000 tree seedlings, strengthening volunteer capacity, promoting environmental awareness, integrating mental health education, and enhancing team cohesion.",
+            "location": {
+                "country": "Kenya",
+                "county": "Kisumu",
+                "subCounties": [],
+                "specificSites": [
+                    "Kenya Medical Training College - Kisumu Main Campus",
+                    "Joyland Secondary Special School",
+                    "CITAM Church - Kisumu",
+                    "ACK Shauri Moyo Ward",
+                    "The Mosque of Jesus Christ Son of Mary - Shauri Moyo"
+                ]
+            },
+            "duration": {
+                "startDate": "2022-10-28",
+                "endDate": "2022-10-30"
+            },
+            "status": "completed",
+            "projectPurpose": "To plant 5,000 tree seedlings within Kisumu County while promoting volunteerism, environmental awareness, and community engagement.",
+            "objectives": [
+                "To plant 5,000 tree seedlings within Kisumu County.",
+                "To develop and strengthen the skills of volunteers.",
+                "To sensitize the community on the importance of tree planting in environmental conservation.",
+                "To promote the spirit of volunteerism."
+            ],
+            "implementationApproach": {
+                "methodology": "Participatory community engagement and institutional partnership model.",
+                "volunteerInvolvement": {
+                    "totalVolunteers": 60,
+                    "sources": [
+                        "YGAK Green Club",
+                        "Egerton University",
+                        "Kenya Red Cross",
+                        "Masinde Muliro University of Science and Technology"
+                    ]
+                },
+                "activities": [
+                    "Tree planting across five institutions",
+                    "Environmental awareness sessions",
+                    "Mental health and environment workshop",
+                    "Community sensitization forums",
+                    "Team building exercises",
+                    "Volunteer capacity building"
+                ]
+            },
+            "treePlantingStatistics": {
+                "totalSeedlingsPlanted": 5000,
+                "indigenousTrees": null,
+                "exoticTrees": null,
+                "fruitTrees": null,
+                "siteBreakdown": [
+                    {
+                        "site": "Kenya Medical Training College - Kisumu Main Campus",
+                        "treesPlanted": 1000
+                    },
+                    {
+                        "site": "Joyland Secondary Special School",
+                        "treesPlanted": 1000
+                    },
+                    {
+                        "site": "CITAM Church - Kisumu",
+                        "treesPlanted": 1500
+                    },
+                    {
+                        "site": "ACK Shauri Moyo Ward",
+                        "treesPlanted": 1500
+                    },
+                    {
+                        "site": "The Mosque of Jesus Christ Son of Mary - Shauri Moyo",
+                        "treesPlanted": 1000
+                    }
+                ]
+            },
+            "partners": [
+                {
+                    "name": "Egerton University",
+                    "role": "Institutional support and volunteer mobilization",
+                    "keyRepresentative": "Prof. Mulwa"
+                },
+                {
+                    "name": "Kisumu County Government",
+                    "department": "Department of Environment",
+                    "keyRepresentative": "Mr. Benard Ojwang"
+                },
+                {
+                    "name": "Kenya Medical Training College - Kisumu",
+                    "role": "Host institution",
+                    "keyRepresentative": "Mr. James Okong’o"
+                },
+                {
+                    "name": "Masinde Muliro University of Science and Technology",
+                    "role": "Volunteer support",
+                    "keyRepresentative": "Mr. Oscar Waswa"
+                },
+                {
+                    "name": "Kenya Red Cross",
+                    "role": "Volunteer participation",
+                    "keyRepresentative": "Mr. Charles Elly"
+                }
+            ],
+            "mediaCoverage": [],
+            "challengesExperienced": [
+                "Inadequate space to plant tree seedlings.",
+                "Language barriers during community engagement.",
+                "Relatively moderate reception from some local stakeholders.",
+                "Late booking of facilities."
+            ],
+            "impact": {
+                "environmentalImpact": "Increased tree cover within learning and religious institutions across Kisumu City.",
+                "communityImpact": "Enhanced environmental awareness, strengthened institutional partnerships, and promoted community ownership of conservation efforts.",
+                "cumulativeTreesPlantedByOrganization": 10000
+            },
+            "alignment": {
+                "sdg": [
+                    "SDG 13 - Climate Action",
+                    "SDG 3 - Good Health and Well-being",
+                    "SDG 17 - Partnerships for the Goals"
+                ],
+                "nationalGoal": "Support Kenya’s national afforestation and climate resilience agenda."
+            },
+            "createdAt": "2022-10-31T10:00:00Z",
+            "updatedAt": "2022-10-31T10:00:00Z"
+        },
+        {
+            "id": "proj_greening_schools_2025_phase1",
+            "title": "Greening Schools Initiative – Phase One 2025",
+            "slug": "greening-schools-initiative-july-september-2025",
+            "image": "/greening-schools-elgeyo-marakwet.jpg",
+            "theme": "Afforestation",
+            "projectTheme": "Greening Schools Initiative",
+            "description": "A school-based environmental restoration initiative implemented between July and September 2025 across Nairobi, Elgeyo Marakwet, and Uasin Gishu counties. The project facilitated the planting of 40,000 seedlings while integrating environmental education, youth engagement, and sustainable land restoration within school communities.",
+            "location": {
+                "country": "Kenya",
+                "county": "Multi-County (Nairobi, Elgeyo Marakwet, Uasin Gishu)",
+                "subCounties": [],
+                "specificSites": [
+                    "Lenana School",
+                    "Flax Primary School",
+                    "St. Ignatius Atnas Kandie",
+                    "Kapsundei Primary School",
+                    "Kapsundei Secondary School",
+                    "Chepkero Primary School",
+                    "Waunfor Primary School",
+                    "Waunfor Secondary School"
+                ]
+            },
+            "duration": {
+                "startDate": "2025-07-17",
+                "endDate": "2025-09-05"
+            },
+            "status": "completed",
+            "projectPurpose": "To restore degraded school landscapes, integrate environmental education into learning institutions, and cultivate a culture of sustainability among students and surrounding communities.",
+            "objectives": [
+                "To increase forest cover through school-based tree planting.",
+                "To foster environmental education and awareness among students.",
+                "To strengthen partnerships between communities and schools.",
+                "To promote sustainable land use and ecological restoration."
+            ],
+            "implementationApproach": {
+                "methodology": "School-centered participatory planting and environmental education model.",
+                "volunteerInvolvement": {
+                    "totalVolunteers": 1000,
+                    "sources": [
+                        "Students across participating schools",
+                        "School administrations",
+                        "Community members",
+                        "Youths For Green Action Kenya"
+                    ]
+                },
+                "activities": [
+                    "Seedling distribution",
+                    "Tree planting exercises",
+                    "Environmental awareness sessions",
+                    "Community-school partnership engagement",
+                    "Youth environmental sensitization"
+                ]
+            },
+            "treePlantingStatistics": {
+                "totalSeedlingsPlanted": 40000,
+                "indigenousTrees": null,
+                "exoticTrees": 35000,
+                "fruitTrees": null,
+                "siteBreakdown": [
+                    {
+                        "site": "Lenana School",
+                        "treesPlanted": 5000
+                    },
+                    {
+                        "site": "Flax Primary School",
+                        "treesPlanted": 5000
+                    },
+                    {
+                        "site": "St. Ignatius Atnas Kandie",
+                        "treesPlanted": 5000
+                    },
+                    {
+                        "site": "Kapsundei Primary School",
+                        "treesPlanted": 5000
+                    },
+                    {
+                        "site": "Kapsundei Secondary School",
+                        "treesPlanted": 5000
+                    },
+                    {
+                        "site": "Chepkero Primary School",
+                        "treesPlanted": 5000
+                    },
+                    {
+                        "site": "Waunfor Primary School",
+                        "treesPlanted": 5000
+                    },
+                    {
+                        "site": "Waunfor Secondary School",
+                        "treesPlanted": 5000
+                    }
+                ]
+            },
+            "partners": [
+                {
+                    "name": "Victoria Furnitures",
+                    "role": "Project Sponsor"
+                },
+                {
+                    "name": "German Imaging Technologies",
+                    "role": "Project Sponsor"
+                },
+                {
+                    "name": "Design Gallery",
+                    "role": "Project Sponsor"
+                }
+            ],
+            "mediaCoverage": [],
+            "challengesExperienced": [
+                "Condensed academic calendar delayed implementation timelines in several schools.",
+                "Sustaining environmental ownership beyond planting day requires structured Green Clubs and follow-up monitoring."
+            ],
+            "impact": {
+                "environmentalImpact": "Restored degraded school landscapes and contributed to increased tree cover across three counties.",
+                "communityImpact": "Enhanced student participation in environmental stewardship and strengthened school-community collaboration.",
+                "cumulativeTreesPlantedByOrganization": 700000
+            },
+            "alignment": {
+                "sdg": [
+                    "SDG 13 - Climate Action",
+                    "SDG 4 - Quality Education",
+                    "SDG 17 - Partnerships for the Goals"
+                ],
+                "nationalGoal": "Support Kenya’s forest cover expansion and sustainable land restoration agenda."
+            },
+            "createdAt": "2025-09-30T10:00:00Z",
+            "updatedAt": "2025-09-30T10:00:00Z"
+        },
+        {
+            "id": "proj_kipkabus_forest_2025_phase1",
+            "title": "Kipkabus Forest Tree Planting Campaign 2025 – Phase One",
+            "slug": "kipkabus-forest-tree-planting-campaign-2025-phase-one",
+            "image": "/Kipkabus.jpg",
+            "theme": "Reforestation",
+            "projectTheme": "Kipkabus Forest Restoration Initiative",
+            "description": "A five-day large-scale forest restoration campaign conducted at Kipkabus Forest in Elgeyo Marakwet County, where 50,000 tree seedlings were planted across 20.2 hectares. The initiative combined exotic and indigenous species to restore forest cover, protect riparian ecosystems, and strengthen partnerships between community groups, government agencies, academic-development partners, and the private sector.",
+            "location": {
+                "country": "Kenya",
+                "county": "Elgeyo Marakwet",
+                "subCounties": [],
+                "specificSites": [
+                    "Kipkabus Forest"
+                ]
+            },
+            "duration": {
+                "startDate": "2025-05-20",
+                "endDate": "2025-05-24"
+            },
+            "status": "completed",
+            "projectPurpose": "To restore forest cover, enhance biodiversity conservation, protect riparian ecosystems, and strengthen collaborative environmental stewardship frameworks.",
+            "objectives": [
+                "Restore forest cover using both exotic and indigenous tree species.",
+                "Protect riparian ecosystems and promote climate resilience.",
+                "Foster local ownership of environmental stewardship and forest management.",
+                "Strengthen partnerships between YGAK, academic-development partners, and private sector sponsors."
+            ],
+            "implementationApproach": {
+                "methodology": "Community-centered participatory forest restoration model",
+                "volunteerInvolvement": {
+                    "totalVolunteers": 100,
+                    "sources": [
+                        "Community Forest Association (CFA)",
+                        "Local women groups",
+                        "Youth groups",
+                        "Government officials",
+                        "Kenya Forest Service officers",
+                        "Youths for Green Action Kenya team"
+                    ]
+                },
+                "activities": [
+                    "Official campaign launch",
+                    "Forest block reforestation",
+                    "Riparian restoration planting",
+                    "Stakeholder coordination and mobilization"
+                ]
+            },
+            "treePlantingStatistics": {
+                "totalSeedlingsPlanted": 50000,
+                "indigenousTrees": 10000,
+                "exoticTrees": 40000,
+                "fruitTrees": null,
+                "siteBreakdown": [
+                    {
+                        "site": "Kipkabus Forest",
+                        "treesPlanted": 50000
+                    }
+                ]
+            },
+            "partners": [
+                {
+                    "name": "TagDev East Africa",
+                    "role": "Academic-development partner and logistics support"
+                },
+                {
+                    "name": "German Imaging Technologies",
+                    "role": "Project Sponsor"
+                },
+                {
+                    "name": "Victoria Furniture",
+                    "role": "Project Sponsor"
+                },
+                {
+                    "name": "The Design Gallery",
+                    "role": "Project Sponsor"
+                },
+                {
+                    "name": "Kenya Forest Service (KFS)",
+                    "role": "Technical oversight and forest management support"
+                },
+                {
+                    "name": "Community Forest Association (CFA)",
+                    "role": "Community mobilization and coordination"
+                }
+            ],
+            "mediaCoverage": [],
+            "challengesExperienced": [
+                "Transition from student-centered planting to community mobilization required rapid coordination adjustments.",
+                "Terrain and logistical access challenges required flexibility and real-time problem solving."
+            ],
+            "impact": {
+                "environmentalImpact": "Restored 20.2 hectares of forest landscape and strengthened riparian ecosystem protection.",
+                "communityImpact": "Deepened collaboration between government agencies, CFA, and local community members.",
+                "cumulativeTreesPlantedByOrganization": 750000
+            },
+            "alignment": {
+                "sdg": [
+                    "SDG 13 - Climate Action",
+                    "SDG 15 - Life on Land"
+                ],
+                "nationalGoal": "Support Kenya’s forest restoration and climate resilience agenda."
+            },
+            "createdAt": "2025-05-25T10:00:00Z",
+            "updatedAt": "2025-05-25T10:00:00Z"
+        },
+        {
+            "id": "proj_mombasa_35000_mangroves_2023",
+            "title": "Mombasa 35,000 Mangroves Project 2023",
+            "slug": "mombasa-35000-mangroves-project-2023",
+            "image": "/mombasa.JPG",
+            "theme": "Coastal Reforestation",
+            "projectTheme": "Future in a Million Trees – Mombasa Mangrove Restoration",
+            "description": "A four-day mangrove restoration project at Port Reitz Creek, Mombasa County, where 35,000 mangrove seedlings were planted across two acres. The initiative engaged university students, local community members, government agencies, and donors to restore degraded coastal ecosystems, enhance biodiversity, and promote environmental awareness.",
+            "location": {
+                "country": "Kenya",
+                "county": "Mombasa",
+                "subCounties": ["Jomvu", "Changamwe"],
+                "specificSites": [
+                    "Port Reitz Creek",
+                    "Mchanjama",
+                    "Maganda Village",
+                    "Changamwe Ward"
+                ]
+            },
+            "duration": {
+                "startDate": "2023-09-24",
+                "endDate": "2023-09-28"
+            },
+            "status": "completed",
+            "projectPurpose": "To restore degraded mangrove ecosystems, enhance coastal biodiversity, promote climate resilience, and engage communities in sustainable environmental stewardship.",
+            "objectives": [
+                "Restore degraded mangrove habitats along Port Reitz Creek.",
+                "Engage students and community members in hands-on environmental action.",
+                "Increase awareness on mangrove conservation and solid waste management.",
+                "Strengthen multi-stakeholder partnerships for long-term coastal ecosystem protection."
+            ],
+            "implementationApproach": {
+                "methodology": "Community and youth-led participatory mangrove restoration combined with environmental education and capacity building.",
+                "volunteerInvolvement": {
+                    "totalVolunteers": 320,
+                    "sources": [
+                        "University students from Egerton University, Masinde Muliro University, Technical University of Kenya, Jomo Kenyatta University of Agriculture & Technology, Multimedia University",
+                        "Local community members and scouts",
+                        "Youth volunteers from Youths for Green Action Kenya"
+                    ]
+                },
+                "activities": [
+                    "Official campaign launch and opening ceremony",
+                    "Mangrove seedling planting at multiple sites",
+                    "Community clean-up and solid waste management awareness",
+                    "Team building and volunteer training sessions",
+                    "Focused group discussions on youth development and environmental issues",
+                    "Closing ceremony and certificate awarding"
+                ]
+            },
+            "treePlantingStatistics": {
+                "totalSeedlingsPlanted": 35000,
+                "indigenousTrees": 35000,
+                "exoticTrees": null,
+                "fruitTrees": null,
+                "siteBreakdown": [
+                    {
+                        "site": "Port Reitz Creek (Mchanjama, Maganda Village)",
+                        "treesPlanted": 35000
+                    }
+                ]
+            },
+            "partners": [
+                {
+                    "name": "TagDev East Africa",
+                    "role": "Project donor and financial support"
+                },
+                {
+                    "name": "Mombasa County Government",
+                    "role": "Logistical support and local coordination"
+                },
+                {
+                    "name": "Ministry of Environment and Forestry",
+                    "role": "Technical oversight"
+                },
+                {
+                    "name": "Kenya Forest Service (KFS)",
+                    "role": "Technical support for mangrove restoration"
+                },
+                {
+                    "name": "Kenya Wildlife Service",
+                    "role": "Ecosystem protection and supervision"
+                },
+                {
+                    "name": "Amani Mikoko Group",
+                    "role": "Mangrove seedling provider"
+                },
+                {
+                    "name": "Local community leadership",
+                    "role": "Community mobilization and volunteer coordination"
+                }
+            ],
+            "mediaCoverage": [],
+            "challengesExperienced": [
+                "Coastal heat and high humidity made volunteer adaptation difficult.",
+                "Exposure to salt spray required precautionary measures for volunteers.",
+                "Many volunteers had limited or no prior experience in mangrove planting or working in coastal environments.",
+                "Physical demands of planting mangroves in muddy and saline areas required close supervision and safety measures."
+            ],
+            "impact": {
+                "environmentalImpact": "Restored two acres of degraded mangrove forest and enhanced coastal ecosystem protection.",
+                "communityImpact": "Engaged local communities and students in mangrove conservation and solid waste management practices.",
+                "cumulativeTreesPlantedByOrganization": 235000
+            },
+            "alignment": {
+                "sdg": [
+                    "SDG 13 - Climate Action",
+                    "SDG 14 - Life Below Water",
+                    "SDG 15 - Life on Land"
+                ],
+                "nationalGoal": "Support Kenya’s coastal ecosystem restoration and climate resilience agenda."
+            },
+            "createdAt": "2023-09-29T10:00:00Z",
+            "updatedAt": "2023-09-29T10:00:00Z"
+        },
+        {
+            "id": "proj_naivasha_community_service_2019",
+            "title": "Naivasha Community Service Project 2019",
+            "slug": "naivasha-community-service-project-2019",
+            "image": "/Nakuru.JPG",
+            "theme": "Environmental Conservation and Community Development",
+            "projectTheme": "Taking a Holistic Approach Towards Green and Beautiful Naivasha",
+            "description": "A four-day youth-led community service initiative in Naivasha Sub-County focused on environmental conservation, waste management, tree planting, and blue economy awareness. The project combined practical community service, environmental education, and philanthropic activities to build resilient cities, promote sustainable development, and enhance youth capacity through hands-on experience and networking.",
+            "location": {
+            "country": "Kenya",
+            "county": "Nakuru",
+            "subCounties": ["Naivasha"],
+            "specificSites": [
+            "Naivasha Industrial Area",
+            "Unity Primary School",
+            "Millimani Primary School",
+            "Naivasha Safe House",
+            "Strong Towers Children’s Home",
+            "Naivasha Referral Hospital"
+            ]
+            },
+            "duration": {
+            "startDate": "2019-10-01",
+            "endDate": "2019-10-04"
+            },
+            "status": "completed",
+            "projectPurpose": "To enhance environmental conservation, promote sustainable waste management, strengthen community resilience, and empower youth to lead development initiatives in Naivasha.",
+            "objectives": [
+            "Promote tree planting and greening of schools, community spaces, and healthcare facilities.",
+            "Increase community awareness on solid waste management and blue economy sustainability.",
+            "Provide philanthropic support to local children’s homes and community centers.",
+            "Develop youth skills in leadership, teamwork, and environmental conservation."
+            ],
+            "implementationApproach": {
+            "methodology": "Youth-led participatory community service combining environmental education, tree planting, philanthropy, and capacity building.",
+            "volunteerInvolvement": {
+            "totalVolunteers": 77,
+            "sources": [
+            "Youths for Green Action Kenya volunteers",
+            "Maasai Mara University students",
+            "Other university student volunteers",
+            "Local community members and Red Cross youth groups",
+            "YMCA volunteers"
+            ]
+            },
+            "activities": [
+            "Sustainability workshop on youth leadership, climate action, and community service",
+            "Visits to children’s homes and safe houses for philanthropic support",
+            "Tree planting at primary schools and public institutions",
+            "Innovation and waste management study visits",
+            "Town clean-up and drainage clearing in Naivasha Industrial Area",
+            "Mental health and team-building sessions",
+            "Blue economy awareness and impact assessment",
+            "Closing activities and documentation"
+            ]
+            },
+            "treePlantingStatistics": {
+            "totalSeedlingsPlanted": 300,
+            "indigenousTrees": 300,
+            "exoticTrees": null,
+            "fruitTrees": null,
+            "siteBreakdown": [
+            {
+            "site": "Unity Primary School and Millimani Primary School",
+            "treesPlanted": 300
+            }
+            ]
+            },
+            "partners": [
+            {
+            "name": "Nakuru County Government",
+            "role": "Logistical support and community coordination"
+            },
+            {
+            "name": "National Environmental Management Authority (NEMA)",
+            "role": "Environmental education and technical guidance"
+            },
+            {
+            "name": "Kenya Forest Service (KFS)",
+            "role": "Technical support in tree planting and conservation"
+            },
+            {
+            "name": "Kenya Red Cross Youths – Naivasha Branch",
+            "role": "Community mobilization and volunteer participation"
+            },
+            {
+            "name": "Young Men Christian Association (YMCA)",
+            "role": "Workshop hosting, youth engagement, and logistical support"
+            },
+            {
+            "name": "Maasai Mara University Volunteers",
+            "role": "Student volunteer participation and environmental awareness"
+            }
+            ],
+            "mediaCoverage": [],
+            "challengesExperienced": [
+            "High initial planning and pre-visit costs including travel, printing, and communications.",
+            "Team accommodation expenses during project implementation.",
+            "Budget shortfalls affecting full realization of project objectives.",
+            "Documentation and publicity limitations, including brochures, banners, and media coverage.",
+            "Ensuring the survival and maintenance of trees planted in community spaces.",
+            "Sustaining long-term impact from clean-up and waste management activities."
+            ],
+            "impact": {
+            "environmentalImpact": "Planted 300 trees in schools and community spaces, promoted proper waste management, and enhanced blue economy awareness.",
+            "communityImpact": "Engaged local youth and community members in environmental stewardship, philanthropy, and team-building initiatives.",
+            "cumulativeTreesPlantedByOrganization": 5000
+            },
+            "alignment": {
+            "sdg": [
+            "SDG 11 - Sustainable Cities and Communities",
+            "SDG 13 - Climate Action",
+            "SDG 15 - Life on Land"
+            ],
+            "nationalGoal": "Support Kenya’s sustainable development and environmental conservation agenda at the county and community level."
+            },
+            "createdAt": "2019-10-05T10:00:00Z",
+            "updatedAt": "2019-10-05T10:00:00Z"
+        },
+        {
+            "id": "proj_narok_100000_trees_2023",
+            "title": "Narok 100,000 Trees Project 2023",
+            "slug": "narok-100000-trees-project-2023",
+            "image": "/narok.JPG",
+            "theme": "Forest Restoration",
+            "projectTheme": "Future in a Million Trees – Narok Forest Regeneration",
+            "description": "A six-day tree planting and environmental conservation project in Chebitat, Mau Forest, Narok County, where 100,000 tree seedlings were planted. The initiative engaged university students, local community members, donors, and government agencies to restore lost forest biodiversity, promote environmental awareness, and build youth environmental leadership.",
+            "location": {
+                "country": "Kenya",
+                "county": "Narok",
+                "subCounties": ["Narok East", "Narok North"],
+                "specificSites": [
+                    "Chebitat Forest",
+                    "Plot No. 23 Mau Forest"
+                ]
+            },
+            "duration": {
+                "startDate": "2023-05-22",
+                "endDate": "2023-05-28"
+            },
+            "status": "completed",
+            "projectPurpose": "To regenerate and conserve Mau Forest, enhance biodiversity, promote youth-led environmental stewardship, and support climate change mitigation.",
+            "objectives": [
+                "Plant 100,000 trees in Chebitat, Mau Forest.",
+                "Engage students and local community members in environmental action.",
+                "Promote youth leadership and governance training in environmental conservation.",
+                "Increase awareness on cultural diversity, forest conservation, and sustainable practices.",
+                "Foster partnerships with government agencies, universities, and donors for long-term impact."
+            ],
+            "implementationApproach": {
+                "methodology": "Youth and community-led participatory forest restoration combined with environmental education, leadership training, and capacity building.",
+                "volunteerInvolvement": {
+                    "totalVolunteers": 300,
+                    "sources": [
+                        "University students from Egerton University, Masinde Muliro University, Technical University of Kenya, Jomo Kenyatta University of Agriculture & Technology, Multimedia University",
+                        "Local community members including scouts",
+                        "Youth volunteers from Youths for Green Action Kenya"
+                    ]
+                },
+                "activities": [
+                    "Official opening ceremony",
+                    "Tree planting across Plot No. 23 in Mau Forest",
+                    "Youth leadership and governance training",
+                    "Cultural diversity education",
+                    "Team building activities (hiking, cooking, games, Maasai Mara game drive)",
+                    "Closing ceremony and recognition awards"
+                ]
+            },
+            "treePlantingStatistics": {
+                "totalSeedlingsPlanted": 100000,
+                "indigenousTrees": 80000,
+                "exoticTrees": 15000,
+                "fruitTrees": 5000,
+                "siteBreakdown": [
+                    {
+                        "site": "Chebitat Forest (Plot No. 23, Mau Forest)",
+                        "treesPlanted": 100000
+                    }
+                ]
+            },
+            "partners": [
+                {
+                    "name": "German Imaging Technologies (GIT)",
+                    "role": "Financial donor"
+                },
+                {
+                    "name": "Mount Meru Group",
+                    "role": "Financial donor"
+                },
+                {
+                    "name": "Victoria Furniture",
+                    "role": "Financial donor"
+                },
+                {
+                    "name": "Narok County Government",
+                    "role": "Logistical support and coordination"
+                },
+                {
+                    "name": "Ministry of Environment and Forestry",
+                    "role": "Technical oversight"
+                },
+                {
+                    "name": "Kenya Forest Service (KFS)",
+                    "role": "Technical support for forest restoration"
+                },
+                {
+                    "name": "Kenya Wildlife Service (KWS)",
+                    "role": "Ecosystem protection and supervision"
+                },
+                {
+                    "name": "National Environment Management Authority (NEMA)",
+                    "role": "Technical support and awareness"
+                },
+                {
+                    "name": "Rapid Deployment Unit (RDU Narok County)",
+                    "role": "Security and logistical support"
+                },
+                {
+                    "name": "Local community leadership (Chief Pulei)",
+                    "role": "Community mobilization and coordination"
+                },
+                {
+                    "name": "Higher learning institutions",
+                    "role": "Volunteer mobilization and logistical support"
+                }
+            ],
+            "mediaCoverage": [],
+            "challengesExperienced": [
+                "First-time camping experience for volunteers in forest terrain",
+                "Cold mornings and sloppy terrain posed planting challenges",
+                "Limited resources and logistical constraints"
+            ],
+            "impact": {
+                "environmentalImpact": "Planted 100,000 trees, restoring degraded forest areas and improving ecosystem resilience.",
+                "communityImpact": "Engaged youth and local communities in environmental conservation, leadership, and cultural education.",
+                "cumulativeTreesPlantedByOrganization": 279000
+            },
+            "alignment": {
+                "sdg": [
+                    "SDG 13 - Climate Action",
+                    "SDG 15 - Life on Land"
+                ],
+                "nationalGoal": "Support Kenya’s afforestation agenda and environmental sustainability efforts."
+            },
+            "createdAt": "2023-05-29T10:00:00Z",
+            "updatedAt": "2023-05-29T10:00:00Z"
+        },
+        {
+            "id": "proj_mtelgon_200000_trees_2024",
+            "title": "Mt. Elgon 200,000 Trees Project 2024",
+            "slug": "mt-elgon-200000-trees-project-2024",
+            "image": "/mt elgon.jpg",
+            "theme": "Forest Restoration",
+            "projectTheme": "Future in a Million Trees – Mt. Elgon Forest Regeneration",
+            "description": "A week-long environmental conservation initiative in Kaberwa Forest, Bungoma County, where 200,000 tree seedlings were planted to restore biodiversity, rehabilitate degraded land, and engage youth and community members in environmental stewardship. The project integrated mentorship, team-building, and community collaboration to foster sustainable forest management practices.",
+            "location": {
+                "country": "Kenya",
+                "county": "Bungoma",
+                "subCounties": ["Kapsokwony", "Bungoma East"],
+                "specificSites": [
+                    "Kaberwa Forest - Chepkungurur",
+                    "Kaberwa Forest - Darfur",
+                    "Kaberwa Forest - Bosnia",
+                    "Kaberwa Forest - 2K",
+                    "Kaberwa Forest - 2L",
+                    "Kaberwa Forest - Mtoni Mbili",
+                    "Kaberwa Forest - Ngam Plots"
+                ]
+            },
+            "duration": {
+                "startDate": "2024-05-13",
+                "endDate": "2024-05-19"
+            },
+            "status": "completed",
+            "projectPurpose": "To restore the ecological health of Mt. Elgon Forest, enhance biodiversity, engage youth and local communities in conservation, and strengthen sustainable forest management practices.",
+            "objectives": [
+                "Plant 200,000 trees in designated plots within Kaberwa Forest.",
+                "Restore degraded forest land to improve biodiversity and ecosystem functionality.",
+                "Engage local communities and school children in environmental stewardship and tree care.",
+                "Provide mentorship, career guidance, and leadership training to youth volunteers.",
+                "Promote sustainable practices and environmental awareness through community participation."
+            ],
+            "implementationApproach": {
+                "methodology": "Youth and community-led participatory forest restoration with integrated mentorship, environmental education, and team-building activities.",
+                "volunteerInvolvement": {
+                    "totalVolunteers": 300,
+                    "sources": [
+                        "University students from Egerton University, Masinde Muliro University of Science & Technology, Technical University of Kenya, Mount Kenya University, Jomo Kenyatta University of Agriculture & Technology, Multimedia University, Presbyterian University of East Africa, Kabarak University, Chuka University, Dedan Kimathi University of Science and Technology",
+                        "Local community members from Kaberwa",
+                        "Youth volunteers from Youths for Green Action Kenya chapters"
+                    ]
+                },
+                "activities": [
+                    "Official opening ceremony with partners, donors, and government representatives",
+                    "Tree planting across multiple plots within Kaberwa Forest",
+                    "Career guidance and mentorship sessions by patrons and donors",
+                    "Team building exercises including hiking, games, and nature appreciation",
+                    "Focus group discussions on environmental, social, and career development topics",
+                    "Community engagement and sustainability training",
+                    "Closing and recognition ceremony"
+                ]
+            },
+            "treePlantingStatistics": {
+                "totalSeedlingsPlanted": 200000,
+                "indigenousTrees": 180000,
+                "exoticTrees": 15000,
+                "fruitTrees": 5000,
+                "siteBreakdown": [
+                    {"site": "Ngam 1", "treesPlanted": 16144},
+                    {"site": "Ngam 2", "treesPlanted": 12757},
+                    {"site": "Mtoni Mbili", "treesPlanted": 12677},
+                    {"site": "2L Plot 1", "treesPlanted": 19196},
+                    {"site": "2L Plot 2", "treesPlanted": 292},
+                    {"site": "2L Plot 3", "treesPlanted": 5865},
+                    {"site": "2K Plot 1", "treesPlanted": 370},
+                    {"site": "2K Plot 2", "treesPlanted": 3480},
+                    {"site": "Ceremony Grounds", "treesPlanted": 627},
+                    {"site": "Bosnia Plot 1", "treesPlanted": 8222},
+                    {"site": "Bosnia Plot 2", "treesPlanted": 14171},
+                    {"site": "Bosnia Plot 3", "treesPlanted": 16808},
+                    {"site": "Darfur", "treesPlanted": 25548},
+                    {"site": "Chepkungurur", "treesPlanted": 19530}
+                ]
+            },
+            "partners": [
+                {"name": "German Imaging Technologies (GIT)", "role": "Financial donor and project patron"},
+                {"name": "Naivas Supermarket", "role": "Financial donor"},
+                {"name": "Victoria Furniture", "role": "Financial donor"},
+                {"name": "Bungoma County Government", "role": "Logistical and administrative support"},
+                {"name": "Kenya Forest Service (KFS)", "role": "Technical support for forest restoration"},
+                {"name": "Kenya Wildlife Service (KWS)", "role": "Ecosystem protection and supervision"},
+                {"name": "Masinde Muliro University of Science & Technology", "role": "Volunteer mobilization and transportation support"},
+                {"name": "Egerton University", "role": "Volunteer mobilization"},
+                {"name": "Technical University of Kenya", "role": "Volunteer mobilization"},
+                {"name": "Multimedia University", "role": "Volunteer mobilization"},
+                {"name": "Kabarak University", "role": "Volunteer mobilization"},
+                {"name": "Chuka University", "role": "Volunteer mobilization"},
+                {"name": "Dedan Kimathi University of Science and Technology", "role": "Volunteer mobilization"},
+                {"name": "Presbyterian University of East Africa", "role": "Volunteer mobilization"}
+            ],
+            "mediaCoverage": [],
+            "challengesExperienced": [
+                "Logistical challenges in planting all trees at a single site",
+                "Sloppy and hilly terrain for tree planting",
+                "Coordination of a large volunteer group across multiple plots"
+            ],
+            "impact": {
+                "environmentalImpact": "Restored 124 acres of Mt. Elgon Forest, planted 200,000 trees, improved biodiversity, and established long-term ecological benefits including soil stabilization and carbon sequestration.",
+                "communityImpact": "Empowered 300 youth and over 150 local community members through active participation, mentorship, and environmental stewardship, fostering sustainable forest management practices.",
+                "cumulativeTreesPlantedByOrganization": 455000
+            },
+            "alignment": {
+                "sdg": ["SDG 13 - Climate Action", "SDG 15 - Life on Land"],
+                "nationalGoal": "Support Kenya’s afforestation agenda and youth-led environmental conservation efforts."
+            },
+            "createdAt": "2024-05-20T10:00:00Z",
+            "updatedAt": "2024-05-20T10:00:00Z"
+        },
+        {
+            "id": "proj_homabay_gsi_phase4_2025",
+            "title": "Greening Schools Initiative — Phase Four (Homa Bay County) 2025",
+            "slug": "greening-schools-initiative-phase-four-homa-bay-2025",
+            "image": "/greening-schools-homa-bay.jpg",
+            "theme": "School-based Reforestation",
+            "projectTheme": "Future in a Million Trees – Homa Bay School Greening",
+            "description": "The fourth phase of Youths for Green Action Kenya's (YGAK) Greening Schools Initiative implemented in Rachuonyo North Sub-County, Homa Bay County, distributing and planting 35,000 indigenous tree seedlings across seven schools. The initiative aimed to restore degraded landscapes, promote environmental awareness among learners, and advance climate action through school-based greening programs.",
+            "location": {
+                "country": "Kenya",
+                "county": "Homa Bay",
+                "subCounties": ["Rachuonyo North"],
+                "specificSites": [
+                    "Ong’ang Primary School",
+                    "Ong’ang Secondary School",
+                    "Kowuor Primary School",
+                    "Kowuor Secondary School",
+                    "Kamollo Primary School",
+                    "Kamollo Secondary School",
+                    "Kunya Primary School"
+                ]
+            },
+            "duration": {
+                "startDate": "2025-10-19",
+                "endDate": "2025-10-19"
+            },
+            "status": "completed",
+            "projectPurpose": "To increase tree cover in schools, instill environmental stewardship among learners, strengthen school-community partnerships, and support Kenya’s broader climate action and reforestation goals.",
+            "objectives": [
+                "Distribute and plant 35,000 indigenous tree seedlings across seven schools.",
+                "Promote environmental education and climate awareness in school programs.",
+                "Strengthen collaboration between schools, communities, and environmental actors.",
+                "Advance Kenya’s climate action agenda through school-based reforestation initiatives."
+            ],
+            "implementationApproach": {
+                "methodology": "Youth-led participatory school greening program integrating tree planting, environmental education, and community engagement.",
+                "volunteerInvolvement": {
+                    "totalVolunteers": 150,
+                    "sources": [
+                        "Students and teachers from participating schools",
+                        "Local community members in Rachuonyo North Sub-County",
+                        "Youth volunteers from Youths for Green Action Kenya chapters"
+                    ]
+                },
+                "activities": [
+                    "Distribution and planting of 35,000 tree seedlings",
+                    "Environmental education sessions integrated into school programs",
+                    "Community mobilization and awareness campaigns",
+                    "Collaboration with local administration for project support"
+                ]
+            },
+            "treePlantingStatistics": {
+                "totalSeedlingsPlanted": 35000,
+                "indigenousTrees": 35000,
+                "exoticTrees": 0,
+                "fruitTrees": 0,
+                "siteBreakdown": [
+                    {"site": "Ong’ang Primary School", "treesPlanted": 5000, "species": ["Bischofia javanica", "Prunus africana"]},
+                    {"site": "Ong’ang Secondary School", "treesPlanted": 5000, "species": ["Mahamia lutea", "Croton silvatica"]},
+                    {"site": "Kowuor Secondary School", "treesPlanted": 5000, "species": ["Podocarpus", "Syzygium"]},
+                    {"site": "Kowuor Primary School", "treesPlanted": 5000, "species": ["Bischofia javanica", "Syzygium"]},
+                    {"site": "Kamollo Primary School", "treesPlanted": 5000, "species": ["Croton silvatica"]},
+                    {"site": "Kamollo Secondary School", "treesPlanted": 5000, "species": ["Bischofia javanica", "Syzygium"]},
+                    {"site": "Kunya Primary School", "treesPlanted": 5000, "species": ["Podocarpus", "Syzygium"]}
+                ]
+            },
+            "partners": [
+                {"name": "German Imaging Technologies (GIT)", "role": "Financial donor and project patron"},
+                {"name": "The Design Gallery", "role": "Financial donor"},
+                {"name": "Victoria Furnitures Ltd", "role": "Financial donor"},
+                {"name": "Local school administrations", "role": "Logistical and administrative support"}
+            ],
+            "mediaCoverage": [],
+            "challengesExperienced": [
+                "Prolonged dry season affecting seedling survival",
+                "Limited post-planting monitoring due to logistical and budget constraints",
+                "Lengthy administrative procedures and delayed approvals"
+            ],
+            "impact": {
+                "environmentalImpact": "Planted 35,000 indigenous seedlings, promoted climate-smart reforestation practices, and strengthened school-based environmental education.",
+                "communityImpact": "Engaged students, teachers, and community members in sustainable land restoration, raising awareness and fostering environmental stewardship.",
+                "cumulativeTreesPlantedByOrganization": 705000
+            },
+            "alignment": {
+                "sdg": ["SDG 13 - Climate Action", "SDG 15 - Life on Land"],
+                "nationalGoal": "Support Kenya’s climate action agenda and school-based reforestation programs."
+            },
+            "createdAt": "2025-10-20T10:00:00Z",
+            "updatedAt": "2025-10-20T10:00:00Z"
+        },
+        {
+            "id": "proj_kakamega_gsi_phase3_2025",
+            "title": "Greening Schools Initiative — Phase Three (Kakamega County) 2025",
+            "slug": "greening-schools-initiative-phase-three-kakamega-2025",
+            "image": "/kakamega.jpg",
+            "theme": "School-based Reforestation",
+            "projectTheme": "Future in a Million Trees – Kakamega School Greening",
+            "description": "The third phase of Youths for Green Action Kenya's (YGAK) Greening Schools Initiative implemented in Kakamega Central Sub-County, Kakamega County, distributing and planting 30,000 tree seedlings across six schools. The initiative promoted environmental awareness, restored degraded school landscapes, and advanced climate action through school-based greening programs.",
+            "location": {
+                "country": "Kenya",
+                "county": "Kakamega",
+                "subCounties": ["Kakamega Central"],
+                "specificSites": [
+                    "Kakamega Primary & Junior Secondary School",
+                    "Rosterman Primary & Junior Secondary School",
+                    "Kakamega Boys High School",
+                    "Kakamega County Polytechnic",
+                    "Bishop Sulumeti Girls High School",
+                    "Bondeni Primary School"
+                ]
+            },
+            "duration": {
+                "startDate": "2025-10-09",
+                "endDate": "2025-10-09"
+            },
+            "status": "completed",
+            "projectPurpose": "To increase tree cover in schools, instill environmental stewardship among learners, strengthen school-community partnerships, and contribute to Kenya’s broader climate action and reforestation goals.",
+            "objectives": [
+                "Distribute and plant 30,000 tree seedlings across six schools.",
+                "Integrate environmental education and climate awareness into school programs.",
+                "Strengthen collaboration between schools, communities, and environmental actors.",
+                "Support Kenya’s national reforestation and climate action initiatives."
+            ],
+            "implementationApproach": {
+                "methodology": "Youth-led participatory school greening program integrating tree planting, environmental education, and community engagement.",
+                "volunteerInvolvement": {
+                    "totalVolunteers": 120,
+                    "sources": [
+                        "Students and teachers from participating schools",
+                        "Local community members in Kakamega Central Sub-County",
+                        "Youth volunteers from Youths for Green Action Kenya chapters"
+                    ]
+                },
+                "activities": [
+                    "Distribution and planting of 30,000 tree seedlings",
+                    "Environmental education sessions integrated into school programs",
+                    "Community mobilization and awareness campaigns",
+                    "Coordination with local administration and school leadership for logistical support"
+                ]
+            },
+            "treePlantingStatistics": {
+                "totalSeedlingsPlanted": 30000,
+                "indigenousTrees": 30000,
+                "exoticTrees": 0,
+                "fruitTrees": 0,
+                "siteBreakdown": [
+                    {"site": "Kakamega Primary & Junior Secondary School", "treesPlanted": 5000, "species": ["Cyprus"]},
+                    {"site": "Rosterman Primary & Junior Secondary School", "treesPlanted": 5000, "species": ["Cyprus"]},
+                    {"site": "Kakamega Boys High School", "treesPlanted": 5000, "species": ["Grevillea", "Cyprus", "Bischofia"]},
+                    {"site": "Kakamega County Polytechnic", "treesPlanted": 5000, "species": ["Cyprus"]},
+                    {"site": "Bishop Sulumeti Girls High School", "treesPlanted": 5000, "species": ["Grevillea", "Cyprus", "Bischofia"]},
+                    {"site": "Bondeni Primary School", "treesPlanted": 5000, "species": ["Cyprus"]}
+                ]
+            },
+            "partners": [
+                {"name": "German Imaging Technologies (GIT)", "role": "Financial donor and project patron"},
+                {"name": "The Design Gallery", "role": "Financial donor"},
+                {"name": "Victoria Furnitures Ltd", "role": "Financial donor"},
+                {"name": "Local school administrations", "role": "Logistical and administrative support"}
+            ],
+            "mediaCoverage": [],
+            "challengesExperienced": [
+                "Delays due to multi-layered administrative approval processes",
+                "Limited post-planting monitoring due to logistical and budget constraints"
+            ],
+            "impact": {
+                "environmentalImpact": "Planted 30,000 indigenous seedlings, improved school landscape biodiversity, and strengthened school-based environmental education.",
+                "communityImpact": "Engaged students, teachers, and community members in sustainable land restoration and environmental awareness, fostering a culture of stewardship.",
+                "cumulativeTreesPlantedByOrganization": 670000
+            },
+            "alignment": {
+                "sdg": ["SDG 13 - Climate Action", "SDG 15 - Life on Land"],
+                "nationalGoal": "Support Kenya’s climate action agenda and school-based reforestation programs."
+            },
+            "createdAt": "2025-10-10T10:00:00Z",
+            "updatedAt": "2025-10-10T10:00:00Z"
+        }
+    ]

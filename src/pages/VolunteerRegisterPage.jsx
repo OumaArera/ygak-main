@@ -3,12 +3,16 @@ import { motion } from "framer-motion";
 import { Loader2, AlertTriangle, Users } from "lucide-react";
 import Notification from '../components/common/Notification'; 
 import { createData, getData } from "../services/apiService"; 
+import ReCaptchaComponent from "../components/home/ReCaptchaComponent";
 
 const VolunteerRegisterPage = () => {
   const [institutions, setInstitutions] = useState([]);
   const [loadingInstitutions, setLoadingInstitutions] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [validationError, setValidationError] = useState("");
+  const [captchaSolved, setCaptchaSolved] = useState(false);
+  const [captchaToken, setCaptchaToken] = useState(null);
+  const [captchaError, setCaptchaError] = useState(false);
   const [notification, setNotification] = useState({
     isVisible: false,
     message: "",
@@ -31,10 +35,9 @@ const VolunteerRegisterPage = () => {
     identificationNumber: "",
     countyOfResidence: "",
     subCountyOfResidence: "",
-    nationality: "Kenyan", // Default for convenience
+    nationality: "Kenyan",
   });
 
-  // --- Notification Handlers ---
   const showNotification = (message, type = "success") => {
     setNotification({
       isVisible: true,
@@ -47,8 +50,13 @@ const VolunteerRegisterPage = () => {
     setNotification({ ...notification, isVisible: false });
   };
 
-  // --- Data Fetching ---
-  // Fetch institutions on component mount
+  const resetCaptcha = () => {
+    setCaptchaSolved(false);
+    setCaptchaToken(null);
+    setCaptchaError(false);
+  };
+  
+
   useEffect(() => {
     const fetchInstitutions = async () => {
       setLoadingInstitutions(true);
@@ -57,7 +65,6 @@ const VolunteerRegisterPage = () => {
         const response = await getData(endpoint);
         setInstitutions(response?.data || []);
       } catch (error) {
-        console.error("Error fetching institutions:", error);
         setInstitutions([]);
       } finally {
         setLoadingInstitutions(false);
@@ -66,7 +73,6 @@ const VolunteerRegisterPage = () => {
     fetchInstitutions();
   }, []);
 
-  // --- Form Handlers ---
   const handleChange = (e) => {
     setValidationError("");
     const { name, value, type, checked } = e.target;
@@ -76,7 +82,6 @@ const VolunteerRegisterPage = () => {
         [name]: type === "checkbox" ? checked : value,
       };
 
-      // Logic to clear conditional fields when switching student status
       if (name === 'isStudent') {
         if (!checked) {
           newData.institutionId = "";
@@ -89,7 +94,25 @@ const VolunteerRegisterPage = () => {
     });
   };
 
-  // Custom validation function for international phone format
+  const handleCaptchaVerify = (solved, token) => {
+    setCaptchaSolved(solved);
+    setCaptchaToken(token);
+    setCaptchaError(false); 
+    setValidationError(""); 
+    
+    if (!solved) {
+        setValidationError("Security check failed or expired. Please re-verify the reCAPTCHA.");
+        setCaptchaToken(null); 
+    }
+  };
+
+  const handleCaptchaError = (hasError) => {
+      setCaptchaError(hasError);
+      setCaptchaSolved(false);
+      setCaptchaToken(null);
+      setValidationError("Failed to load security check. Please check your internet connection.");
+  }
+
   const validatePhone = (phone) => {
     const phoneRegex = /^\+[0-9\s-]{7,20}$/;
     return phoneRegex.test(phone);
@@ -98,8 +121,6 @@ const VolunteerRegisterPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setValidationError("");
-
-    // --- Phone Number Validation ---
     if (!validatePhone(formData.phoneNumber)) {
       setValidationError("Please enter your phone number in international format (e.g., +254712345678).");
       return;
@@ -109,15 +130,17 @@ const VolunteerRegisterPage = () => {
       return;
     }
 
-    // --- Payload Cleaning: Conditionally include/exclude fields ---
-    const payload = { ...formData };
+    if (!captchaSolved || captchaError || !captchaToken) {
+        setValidationError("Please complete the security challenge before submitting.");
+        return;
+    }
 
-    // 1. Handle optional Next of Kin Email
+    const payload = { ...formData, recaptchaToken: captchaToken };
+
     if (!payload.nextOfKinEmail || payload.nextOfKinEmail.trim() === "") {
       delete payload.nextOfKinEmail;
     }
 
-    // 2. Handle conditional Student/Non-Student fields
     if (payload.isStudent) {
       delete payload.identificationNumber;
 
@@ -135,7 +158,6 @@ const VolunteerRegisterPage = () => {
       }
     }
 
-    // --- Submission Logic (from GetInvolved.js) ---
     setIsSubmitting(true);
     const endpoint = "volunteers";
 
@@ -144,35 +166,36 @@ const VolunteerRegisterPage = () => {
 
       if (response.success) {
         showNotification("Your volunteer application has been submitted successfully! We'll be in touch soon.", "success");
-        // Optionally reset form data on success
         setFormData({
             firstName: "", otherNames: "", sex: "", dateOfBirth: "", phoneNumber: "", email: "",
             nextOfKinName: "", nextOfKinPhoneNumber: "", nextOfKinEmail: "", isStudent: false,
             institutionId: "", schoolRegNumber: "", identificationNumber: "",
             countyOfResidence: "", subCountyOfResidence: "", nationality: "Kenyan",
         });
+        resetCaptcha(); 
       } else {
+        if (response.message && response.message.includes("reCAPTCHA")) {
+             setValidationError("Security check failed. Please re-verify the CAPTCHA and try again.");
+             resetCaptcha(); 
+             return; 
+        }
+        
         if (response.error === "Validation error" && Array.isArray(response.details) && response.details.length > 0) {
-
           const firstDetail = response.details[0];
           let userMessage = `Error in ${firstDetail.field}: ${firstDetail.message}.`;
-
           if (firstDetail.field === "phoneNumber" && firstDetail.message.includes("unique")) {
              userMessage = "This phone number is already registered. Please check the number or use a different one.";
           }
           else if (response.details.length > 1) {
               userMessage = `Multiple errors found: ${response.details.length} fields failed validation. Please review your input.`;
           }
-
           showNotification(userMessage, "error");
-
         } else {
           const errorMessage = response.message || "Submission failed. Please check your data and try again.";
           showNotification(errorMessage, "error");
         }
       }
     } catch (error) {
-      console.error("Volunteer submission error:", error);
       showNotification("An unexpected error occurred. Please check your connection and try again.", "error");
     } finally {
       setIsSubmitting(false);
@@ -295,13 +318,16 @@ const VolunteerRegisterPage = () => {
             <input type="text" name="countyOfResidence" placeholder="County of Residence" required onChange={handleChange} value={formData.countyOfResidence} className="border border-gray-300 rounded-lg px-4 py-3" />
             <input type="text" name="subCountyOfResidence" placeholder="Sub-County of Residence" required onChange={handleChange} value={formData.subCountyOfResidence} className="border border-gray-300 rounded-lg px-4 py-3" />
             <input type="text" name="nationality" placeholder="Nationality" required onChange={handleChange} value={formData.nationality} className="border border-gray-300 rounded-lg px-4 py-3" />
+            
+            
 
             {/* Submit Button */}
             <div className="md:col-span-2 pt-4">
+              <ReCaptchaComponent onVerify={handleCaptchaVerify} onError={handleCaptchaError} />
               <button
                 type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-lg transition disabled:bg-green-400 disabled:cursor-wait flex items-center justify-center space-x-2 shadow-lg"
+                disabled={isSubmitting || !captchaSolved || captchaError}
+                className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-lg transition disabled:bg-gray-400 disabled:cursor-wait flex items-center justify-center space-x-2 shadow-lg"
               >
                 {isSubmitting ? (
                   <>

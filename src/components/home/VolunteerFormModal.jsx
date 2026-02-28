@@ -2,11 +2,15 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Loader2, AlertTriangle } from "lucide-react";
 import { getData } from "../../services/apiService";
+import ReCaptchaComponent from "./ReCaptchaComponent";
 
 const VolunteerFormModal = ({ isOpen, onClose, onSubmit, isSubmitting }) => {
   const [institutions, setInstitutions] = useState([]);
   const [loadingInstitutions, setLoadingInstitutions] = useState(false);
   const [validationError, setValidationError] = useState("");
+  const [captchaSolved, setCaptchaSolved] = useState(false);
+  const [captchaToken, setCaptchaToken] = useState(null);
+  const [captchaError, setCaptchaError] = useState(false);
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -27,7 +31,23 @@ const VolunteerFormModal = ({ isOpen, onClose, onSubmit, isSubmitting }) => {
     nationality: "",
   });
 
-  // Fetch institutions
+  const resetForm = () => {
+    setFormData({
+        firstName: "", otherNames: "", sex: "", dateOfBirth: "", phoneNumber: "", email: "",
+        nextOfKinName: "", nextOfKinPhoneNumber: "", nextOfKinEmail: "", isStudent: false,
+        institutionId: "", schoolRegNumber: "", identificationNumber: "",
+        countyOfResidence: "", subCountyOfResidence: "", nationality: "",
+    });
+    setValidationError("");
+    resetCaptcha();
+  };
+
+  const resetCaptcha = () => {
+    setCaptchaSolved(false);
+    setCaptchaToken(null);
+    setCaptchaError(false);
+  };
+  
   useEffect(() => {
     if (isOpen) {
       const fetchInstitutions = async () => {
@@ -37,7 +57,6 @@ const VolunteerFormModal = ({ isOpen, onClose, onSubmit, isSubmitting }) => {
           const response = await getData(endpoint);
           setInstitutions(response?.data || []);
         } catch (error) {
-          console.error("Error fetching institutions:", error);
           setInstitutions([]);
         } finally {
           setLoadingInstitutions(false);
@@ -55,14 +74,11 @@ const VolunteerFormModal = ({ isOpen, onClose, onSubmit, isSubmitting }) => {
         ...prevData,
         [name]: type === "checkbox" ? checked : value,
       };
-      // Logic to clear conditional fields when switching student status
       if (name === 'isStudent') {
         if (!checked) {
-          // Switching to non-student: clear student fields
           newData.institutionId = "";
           newData.schoolRegNumber = "";
         } else {
-          // Switching to student: clear non-student ID field
           newData.identificationNumber = "";
         }
       }
@@ -70,9 +86,26 @@ const VolunteerFormModal = ({ isOpen, onClose, onSubmit, isSubmitting }) => {
     });
   };
   
-  // Custom validation function for international phone format
+  const handleCaptchaVerify = (solved, token) => {
+    setCaptchaSolved(solved);
+    setCaptchaToken(token);
+    setCaptchaError(false);
+    setValidationError(""); 
+    
+    if (!solved) {
+        setValidationError("Security check failed or expired. Please re-verify the reCAPTCHA.");
+        setCaptchaToken(null);
+    }
+  };
+
+  const handleCaptchaError = (hasError) => {
+      setCaptchaError(hasError);
+      setCaptchaSolved(false);
+      setCaptchaToken(null);
+      setValidationError("Failed to load security check. Please check your internet connection.");
+  }
+  
   const validatePhone = (phone) => {
-      // Basic check: must start with '+' and contain between 7 and 20 digits, spaces, or hyphens
       const phoneRegex = /^\+[0-9\s-]{7,20}$/; 
       return phoneRegex.test(phone);
   };
@@ -81,7 +114,6 @@ const VolunteerFormModal = ({ isOpen, onClose, onSubmit, isSubmitting }) => {
     e.preventDefault();
     setValidationError("");
 
-    // --- Phone Number Validation ---
     if (!validatePhone(formData.phoneNumber)) {
         setValidationError("Please enter your phone number in international format (e.g., +254712345678).");
         return;
@@ -90,41 +122,37 @@ const VolunteerFormModal = ({ isOpen, onClose, onSubmit, isSubmitting }) => {
         setValidationError("Please enter the Next of Kin phone number in international format (e.g., +254712345678).");
         return;
     }
-    // --- End Validation ---
-
-    // --- Payload Cleaning: Conditionally include/exclude fields ---
-    const payload = { ...formData };
     
-    // 1. Handle optional Next of Kin Email
+    if (!captchaSolved || captchaError || !captchaToken) {
+        setValidationError("Please complete the security challenge before submitting.");
+        return;
+    }
+
+    const payload = { ...formData, recaptchaToken: captchaToken };
+    
     if (!payload.nextOfKinEmail || payload.nextOfKinEmail.trim() === "") {
         delete payload.nextOfKinEmail;
     }
     
-    // 2. Handle conditional Student/Non-Student fields
     if (payload.isStudent) {
-        // If student: exclude identificationNumber
         delete payload.identificationNumber;
         
-        // Ensure student fields are present if student
         if (!payload.institutionId || !payload.schoolRegNumber) {
             setValidationError("Please select your institution and enter your registration number.");
             return;
         }
 
     } else {
-        // If NOT student: exclude student fields
         delete payload.institutionId;
         delete payload.schoolRegNumber;
 
-        // Ensure identification number is present if non-student
         if (!payload.identificationNumber) {
             setValidationError("Please enter your Identification Number (ID/Passport).");
             return;
         }
     }
     
-    // Proceed with submission using the cleaned payload
-    onSubmit(payload);
+    onSubmit(payload, resetCaptcha, resetForm);
   };
 
   return (
@@ -136,7 +164,6 @@ const VolunteerFormModal = ({ isOpen, onClose, onSubmit, isSubmitting }) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
-          {/* Modal Container */}
           <motion.div
             initial={{ scale: 0.9, y: 30 }}
             animate={{ scale: 1, y: 0 }}
@@ -144,7 +171,6 @@ const VolunteerFormModal = ({ isOpen, onClose, onSubmit, isSubmitting }) => {
             transition={{ type: "spring", stiffness: 100, damping: 15 }}
             className="bg-white rounded-2xl shadow-2xl w-full max-w-3xl relative flex flex-col max-h-[90vh]"
           >
-            {/* Close Button */}
             <button
               onClick={onClose}
               className="absolute top-4 right-4 text-gray-500 hover:text-green-700 transition z-10 p-2"
@@ -152,7 +178,6 @@ const VolunteerFormModal = ({ isOpen, onClose, onSubmit, isSubmitting }) => {
               <X size={24} />
             </button>
 
-            {/* Header */}
             <div className="px-6 pt-6 pb-2 border-b border-gray-200">
               <h2 className="text-2xl font-bold text-center text-green-800">
                 Join as a Volunteer 🌿
@@ -162,9 +187,7 @@ const VolunteerFormModal = ({ isOpen, onClose, onSubmit, isSubmitting }) => {
               </p>
             </div>
 
-            {/* Scrollable Content */}
             <div className="overflow-y-auto px-6 py-4 space-y-4 flex-1">
-              {/* Validation Error Display */}
               {validationError && (
                   <motion.div 
                       initial={{ opacity: 0, y: -10 }}
@@ -180,7 +203,6 @@ const VolunteerFormModal = ({ isOpen, onClose, onSubmit, isSubmitting }) => {
                 onSubmit={handleSubmit}
                 className="grid grid-cols-1 md:grid-cols-2 gap-6"
               >
-                {/* Personal Info */}
                 <input
                   type="text"
                   name="firstName"
@@ -219,7 +241,6 @@ const VolunteerFormModal = ({ isOpen, onClose, onSubmit, isSubmitting }) => {
                   className="border border-gray-300 rounded-lg px-3 py-2"
                 />
 
-                {/* Contact Info */}
                 <input
                   type="tel"
                   name="phoneNumber"
@@ -241,7 +262,6 @@ const VolunteerFormModal = ({ isOpen, onClose, onSubmit, isSubmitting }) => {
                   className="border border-gray-300 rounded-lg px-3 py-2"
                 />
 
-                {/* Next of Kin */}
                 <input
                   type="text"
                   name="nextOfKinName"
@@ -271,7 +291,6 @@ const VolunteerFormModal = ({ isOpen, onClose, onSubmit, isSubmitting }) => {
                   className="border border-gray-300 rounded-lg px-3 py-2 md:col-span-2"
                 />
 
-                {/* Student Check */}
                 <label className="flex items-center space-x-2 md:col-span-2">
                   <input
                     type="checkbox"
@@ -282,7 +301,6 @@ const VolunteerFormModal = ({ isOpen, onClose, onSubmit, isSubmitting }) => {
                   <span className="text-gray-700 font-medium">I am a student</span>
                 </label>
 
-                {/* Conditional Fields */}
                 {formData.isStudent ? (
                   <>
                     <select
@@ -335,7 +353,6 @@ const VolunteerFormModal = ({ isOpen, onClose, onSubmit, isSubmitting }) => {
                   />
                 )}
 
-                {/* Location */}
                 <input
                   type="text"
                   name="countyOfResidence"
@@ -366,13 +383,15 @@ const VolunteerFormModal = ({ isOpen, onClose, onSubmit, isSubmitting }) => {
               </form>
             </div>
 
-            {/* Sticky Footer Button */}
             <div className="border-t border-gray-200 bg-white p-4 rounded-b-2xl">
+              <div className="mb-4">
+                <ReCaptchaComponent onVerify={handleCaptchaVerify} onError={handleCaptchaError} />
+              </div>
               <button
                 type="submit"
                 onClick={handleSubmit}
-                disabled={isSubmitting}
-                className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-lg transition disabled:bg-green-400 disabled:cursor-wait flex items-center justify-center space-x-2"
+                disabled={isSubmitting || !captchaSolved || captchaError}
+                className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-lg transition disabled:bg-gray-400 disabled:cursor-wait flex items-center justify-center space-x-2 shadow-lg"
               >
                 {isSubmitting ? (
                     <>

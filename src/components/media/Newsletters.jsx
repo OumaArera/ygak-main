@@ -77,7 +77,7 @@ const Newsletters = () => {
   };
 
   return (
-    <div className="pb-16 bg-gray-50 min-h-screen">
+    <div className="pb-30 bg-gray-50 min-h-screen">
       {/* Hero */}
       <section className="relative h-[50vh] flex flex-col items-center justify-center text-center overflow-hidden bg-[#0d160e] text-white -mt-4 sm:-mt-6">
         <motion.h1

@@ -31,24 +31,25 @@ import PlatformWebsites from './components/resources/PlatformWebsites';
 import VolunteerRegisterPage from './pages/VolunteerRegisterPage';
 import PartnerWithUs from './pages/PartnerWithUs';
 import ContactUs from './pages/ContactUs';
-import PrivacyPolicy from './components/policies/PrivacyPolicy';
+import PolcDoc from './components/policies/PolDoc';
 import ConflictOfInterestPolicy from './components/policies/ConflictOfInterestPolicy';
 import AntiBriberyPolicy from './components/policies/AntiBriberyPolicy';
 import WhistleBlowerPolicy from './components/policies/WhistleBlowerPolicy';
 import SafeguardingPolicy from './components/policies/SafeguardingPolicy';
 import DonorAndPartnerStatement from './components/policies/DonorAndPartnerStatement';
+import InitiativeDetails from './components/projects/InitiativeDetails';
 
 function App() {
   return (
     <Router>
       <div className="flex flex-col min-h-screen">
         <Header />
-        <main className="flex-grow pt-24">
+        <main className="flex-grow pt-0">
           <Routes>
             {/* Define routes here */}
             
             <Route path="/" element={<Home />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/privacy-policy" element={<PolcDoc />} />
             <Route path="/resources/conflict-of-interest" element={<ConflictOfInterestPolicy />} />
             <Route path="/resources/anti-bribery-and-anti-fraud" element={<AntiBriberyPolicy />} />
             <Route path="/resources/whistle-blower-protection" element={<WhistleBlowerPolicy />} />
@@ -60,8 +61,9 @@ function App() {
             <Route path="/about/impact-stories" element={<ImpactStories />} />
             <Route path="/activities/projects" element={<Projects />} />
             <Route path="/activities/programs" element={<Programs />} />
-            <Route path="/activities/inititives" element={<Initiatives />} />
+            <Route path="/activities/initiatives" element={<Initiatives />} />
             <Route path="/activities/projects/:id" element={<ProjectDetails />} />
+            <Route path="/activities/initiatives/:id" element={<InitiativeDetails />} />
             <Route path="/media" element={<MediaCenter />} />
             <Route path="/media/press/" element={<Press />} />
             <Route path="/media/newsletters" element={<Newsletters />} />

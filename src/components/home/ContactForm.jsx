@@ -5,6 +5,17 @@ import { createData } from "../../services/apiService";
 import ReCaptchaComponent from "./ReCaptchaComponent";
 
 const ContactForm = () => {
+  const workingHours = [
+    "9:00 AM - 10:00 AM",
+    "10:00 AM - 11:00 AM",
+    "11:00 AM - 12:00 PM",
+    "12:00 PM - 1:00 PM",
+    "1:00 PM - 2:00 PM",
+    "2:00 PM - 3:00 PM",
+    "3:00 PM - 4:00 PM",
+    "4:00 PM - 5:00 PM",
+  ];
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -237,6 +248,7 @@ const ContactForm = () => {
                 >
                     <option value="Email">Email</option>
                     <option value="Phone">Phone</option>
+                    <option value="WhatsApp">WhatsApp</option>
                 </select>
             </div>
 
@@ -254,14 +266,19 @@ const ContactForm = () => {
 
             <div>
                 <label className={labelClass}>Best time to contact (for phone)</label>
-                <input
-                    type="text"
+                <select
                     name="bestTime"
                     value={formData.bestTime}
                     onChange={handleChange}
-                    placeholder="e.g., Weekdays 9 AM - 1 PM EAT"
                     className={inputClass}
-                />
+                >
+                    <option value="">Select a time slot</option>
+                    {workingHours.map((hour) => (
+                        <option key={hour} value={hour}>
+                            {hour} EAT
+                        </option>
+                    ))}
+                </select>
             </div>
 
             <div>

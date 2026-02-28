@@ -7,48 +7,116 @@ import { getData } from "../../services/apiService";
 const sampleEventPhotos = [
   {
     id: 1,
-    eventName: "National Tree Planting Day",
+    eventName: "Kipkabus Project 2025",
     date: "2025-01-15",
     photos: [
-      "/pillar-climate.jpg",
-      "/bg_image.jpg",
-      "/37402022-42.JPG",
+      "/kikabus1.jpg",
+      "/kikabus2.jpg",
+      "/kikabus1.jpg",
     ],
     googlePhotosUrl: "https://photos.app.goo.gl/sample1",
   },
   {
     id: 2,
-    eventName: "Youth Climate Dialogue",
+    eventName: "Greening Schools Initiative - Elgeyo Marakwet",
     date: "2025-02-20",
     photos: [
-      "/pillar-climate.jpg",
-      "/bg_image.jpg",
-      "/37402022-42.JPG",
+      "/elgeyo1.jpg",
+      "/elgeyo2.jpg",
+      "/elgeyo13.jpg",
     ],
     googlePhotosUrl: "https://photos.app.goo.gl/sample2",
   },
   {
     id: 3,
-    eventName: "Green Innovation Hub Launch",
+    eventName: "Greening Schools Initiative - Lenana",
     date: "2025-03-10",
     photos: [
-      "/pillar-climate.jpg",
-      "/bg_image.jpg",
-      "/37402022-42.JPG",
+      "/lenana1.jpg",
+      "/lenana2.jpg",
+      "/lenana3.jpg",
     ],
     googlePhotosUrl: "https://photos.app.goo.gl/sample3",
   },
   {
     id: 4,
-    eventName: "National Clean-Up Day",
+    eventName: "Greening Schools Initiative - Homa Bay",
     date: "2025-04-12",
     photos: [
-      "/pillar-climate.jpg",
-      "/bg_image.jpg",
-      "/37402022-42.JPG",
+      "/homa-bay1.jpg",
+      "/homa-bay2.jpg",
+      "/homa-bay3.jpg",
     ],
     googlePhotosUrl: "https://photos.app.goo.gl/sample4",
   },
+  {
+    id: 5,
+    eventName: "Tree Planting Initiative - Mt. Elgon",
+    date: "2024-04-12",
+    photos: [
+      "/elgon1.jpg",
+      "/elgon2.jpg",
+      "/elgon3.jpg",
+    ],
+    googlePhotosUrl: "https://photos.app.goo.gl/sample4",
+  },
+  {
+    id: 6,
+    eventName: "Green Goals Tournament - Homa Bay",
+    date: "2025-04-12",
+    photos: [
+      "/dago1.JPG",
+      "/dago2.JPG",
+      "/dago3.JPG",
+    ],
+    googlePhotosUrl: "https://photos.app.goo.gl/sample4",
+  },
+  {
+    id: 7,
+    eventName: "Environment Cleanup - Nakuru",
+    date: "2025-04-12",
+    photos: [
+      "/nakuru1.JPG",
+      "/nakuru2.JPG",
+      "/nakuru3.JPG",
+    ],
+    googlePhotosUrl: "https://photos.app.goo.gl/sample4",
+  },
+  {
+    id: 8,
+    eventName: "Tree Planting Initiative - Narok",
+    date: "2025-04-12",
+    photos: [
+      "/narok1.JPG",
+      "/narok2.JPG",
+      "/narok3.JPG",
+    ],
+    googlePhotosUrl: "https://photos.app.goo.gl/sample4",
+  },
+  {
+    id: 9,
+    eventName: "YGAK Team Building",
+    date: "2025-04-12",
+    photos: [
+      "/team-building1.JPG",
+      "/team-building2.JPG",
+      "/team-building3.JPG",
+      "/team-building4.JPG",
+    ],
+    googlePhotosUrl: "https://photos.app.goo.gl/sample4",
+  },
+  {
+    id: 10,
+    eventName: "Greening Schools Initiative - Kakamega",
+    date: "2025-02-20",
+    photos: [
+      "/kakamega1.jpg",
+      "/kakamega2.jpg",
+      "/kakamega3.jpg",
+    ],
+    googlePhotosUrl: "https://photos.app.goo.gl/YwekCxuk6pSMmGuT9",
+  },
+  
 ];
 
 const EventPhotos = () => {

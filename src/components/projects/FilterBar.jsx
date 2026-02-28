@@ -5,6 +5,7 @@ import { Search } from "lucide-react";
 const themes = [
   "All",
   "Reforestation",
+  "School-based Reforestation",
   "Waste Management",
   "Environmental Education",
   "Climate Action",

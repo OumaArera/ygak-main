@@ -176,7 +176,7 @@ const Footer = () => {
           </p>
 
           {/* MOBILE-FRIENDLY FIX: ensure input can shrink and button keeps a minimum width */}
-          <form
+          {/* <form
             onSubmit={(e) => e.preventDefault()}
             className="flex items-center bg-white/10 rounded-full mb-4 w-full"
           >
@@ -192,7 +192,7 @@ const Footer = () => {
             >
               Subscribe
             </button>
-          </form>
+          </form> */}
 
           <div className="flex space-x-4">
             {socialLinks.map((social) => (

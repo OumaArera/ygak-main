@@ -7,32 +7,19 @@ import { getData } from "../../services/apiService";
 const sampleReports = [
   {
     id: 1,
-    title: "Annual Report 2024",
-    description: "Comprehensive review of activities, impact, and financials for 2024.",
-    file: "/NEST_Authentication_Design_Document_V1.pdf",
-    date: "2025-01-15",
+    title: "YGAK End of Year 2023 Summary",
+    description: "Comprehensive review of activities, impact, and financials for 2023.",
+    file: "/YGAK EYD 2023 PPT.pdf_3.pdf",
+    date: "2023-01-15",
   },
   {
     id: 2,
-    title: "Annual Report 2023",
-    description: "Overview of key achievements, projects, and financial statements of 2023.",
-    file: "/NEST_Authentication_Design_Document_V1.pdf",
-    date: "2024-01-20",
+    title: "YGAK 2025 Activities Summary",
+    description: "Comprehensive review of activities, impact, and financials for 2025.",
+    file: "/YGAK 2025 ACTIVITIES SUMMARY REVIEW.pdf",
+    date: "2025-01-15",
   },
-  {
-    id: 3,
-    title: "Sustainability Report 2024",
-    description: "Insights into YGAK's environmental initiatives and sustainable practices.",
-    file: "/NEST_Authentication_Design_Document_V1.pdf",
-    date: "2025-03-10",
-  },
-  {
-    id: 4,
-    title: "Impact Report 2023",
-    description: "Highlights of community projects, tree planting programs, and youth engagements.",
-    file: "/NEST_Authentication_Design_Document_V1.pdf",
-    date: "2024-04-05",
-  },
+  
 ];
 
 const Reports = () => {

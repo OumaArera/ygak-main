@@ -1,70 +1,49 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
-import { Loader2, ArrowLeft, ArrowRight } from "lucide-react"; 
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import ProjectCard from "./ProjectCard";
-import { getData } from "../../services/apiService";
-import { getTodayDate } from "../../utils/getDate";
+import { projects } from "../../data/projects.data";
+
+const PAGE_LIMIT = 3;
 
 const ProjectsGrid = ({ selectedTheme, searchTitle }) => {
-  const [projects, setProjects] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [meta, setMeta] = useState({ total: 0, page: 1, limit: 20, totalPages: 1 });
   const [currentPage, setCurrentPage] = useState(1);
 
-  const getProjects = useCallback(async () => {
-    try {
-      setLoading(true);
-      const todayDate = getTodayDate();
-      const endpoint = "upcoming-projects";
-      const params = {
-        page: currentPage,
-        limit: 20,
-        date: todayDate,
-      };
+  // Filter projects client-side based on selectedTheme and searchTitle
+  const filteredProjects = useMemo(() => {
+    return projects.filter((project) => {
+      const matchesTheme =
+        !selectedTheme || selectedTheme === "All" || project.theme === selectedTheme;
+      const matchesTitle =
+        !searchTitle.trim() ||
+        project.title.toLowerCase().includes(searchTitle.trim().toLowerCase());
+      return matchesTheme && matchesTitle;
+    });
+  }, [selectedTheme, searchTitle]);
 
-      if (selectedTheme && selectedTheme !== "All") {
-        params.theme = selectedTheme;
-      }
+  const totalPages = Math.max(1, Math.ceil(filteredProjects.length / PAGE_LIMIT));
 
-      if (searchTitle.trim()) {
-        params.title = searchTitle.trim();
-      }
-
-      const response = await getData(endpoint, params);
-      setProjects(response?.data?.data || []);
-      setMeta(response?.data?.meta || { total: 0, page: currentPage, limit: 3, totalPages: 1 });
-    } catch (error) {
-      console.error("Error fetching projects:", error);
-      setProjects([]);
-      setMeta({ total: 0, page: currentPage, limit: 20, totalPages: 1 });
-    } finally {
-      setLoading(false);
-    }
-  }, [currentPage, selectedTheme, searchTitle]);
-
+  // Reset to page 1 whenever filters change
   useEffect(() => {
-    getProjects();
-  }, [getProjects]);
+    setCurrentPage(1);
+  }, [selectedTheme, searchTitle]);
+
+  const paginatedProjects = filteredProjects.slice(
+    (currentPage - 1) * PAGE_LIMIT,
+    currentPage * PAGE_LIMIT
+  );
 
   const handleNextPage = () => {
-    if (currentPage < meta.totalPages) {
-      setCurrentPage((prevPage) => prevPage + 1);
-    }
+    if (currentPage < totalPages) setCurrentPage((p) => p + 1);
   };
 
   const handlePrevPage = () => {
-    if (currentPage > 1) {
-      setCurrentPage((prevPage) => prevPage - 1);
-    }
+    if (currentPage > 1) setCurrentPage((p) => p - 1);
   };
 
   return (
     <section className="py-16 px-6 sm:px-10 lg:px-16">
-      {loading ? (
-        <div className="flex justify-center items-center h-64">
-          <Loader2 size={48} className="animate-spin text-[#1B5E20]" />
-        </div>
-      ) : projects.length === 0 ? (
+      {paginatedProjects.length === 0 ? (
         <div className="text-center py-10">
           <p className="text-xl text-gray-700">No projects found for the selected filters.</p>
           <p className="text-gray-500 mt-2">Try adjusting your theme or search query.</p>
@@ -73,12 +52,12 @@ const ProjectsGrid = ({ selectedTheme, searchTitle }) => {
         <>
           <div
             className={`grid gap-8 max-w-3xl mx-auto justify-items-center ${
-              projects.length === 1
+              paginatedProjects.length === 1
                 ? "grid-cols-1 place-items-center"
                 : "sm:grid-cols-2 lg:grid-cols-3"
             }`}
           >
-            {projects.map((project, i) => (
+            {paginatedProjects.map((project, i) => (
               <motion.div
                 key={project.id}
                 initial={{ opacity: 0, y: 30 }}
@@ -91,13 +70,13 @@ const ProjectsGrid = ({ selectedTheme, searchTitle }) => {
             ))}
           </div>
 
-          {meta.totalPages > 1 && (
+          {totalPages > 1 && (
             <div className="flex justify-center items-center space-x-4 mt-12">
               <button
                 onClick={handlePrevPage}
-                disabled={currentPage === 1 || loading}
+                disabled={currentPage === 1}
                 className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-semibold transition ${
-                  currentPage === 1 || loading
+                  currentPage === 1
                     ? "bg-gray-300 text-gray-500 cursor-not-allowed"
                     : "bg-[#1B5E20] text-white hover:bg-[#145A24]"
                 }`}
@@ -105,16 +84,16 @@ const ProjectsGrid = ({ selectedTheme, searchTitle }) => {
                 <ArrowLeft size={18} />
                 <span>Previous</span>
               </button>
-              
+
               <span className="text-gray-700 font-medium">
-                Page {currentPage} of {meta.totalPages}
+                Page {currentPage} of {totalPages}
               </span>
 
               <button
                 onClick={handleNextPage}
-                disabled={currentPage === meta.totalPages || loading}
+                disabled={currentPage === totalPages}
                 className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-semibold transition ${
-                  currentPage === meta.totalPages || loading
+                  currentPage === totalPages
                     ? "bg-gray-300 text-gray-500 cursor-not-allowed"
                     : "bg-[#1B5E20] text-white hover:bg-[#145A24]"
                 }`}
