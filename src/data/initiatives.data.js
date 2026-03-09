@@ -1,126 +1,5 @@
 export const initiatives = [
-        {
-        "id": "proj_kakamega_2022_001",
-        "title": "Kakamega Tree Planting Initiative 2022",
-        "slug": "future-in-a-million-trees-kakamega-2022",
-        "image": "/greening-school.jpg",
-        "theme": "Afforestation",
-        "projectTheme": "Future in a Million Trees",
-        "description": "A four-day environmental conservation initiative conducted in Kakamega County focused on planting 10,000 tree seedlings, strengthening community participation, youth empowerment, and environmental awareness aligned with SDG 13 on Climate Action.",
-        "location": {
-            "country": "Kenya",
-            "county": "Kakamega",
-            "subCounties": ["Shinyalu", "Ikolomani", "Lurambi"],
-            "specificSites": [
-            "Bondeni Primary School",
-            "Kambiri Community (River Nandamanywa – Ingolomosio Village)",
-            "Shitoli Polytechnic",
-            "St Jerome Savane Polytechnic"
-            ]
-        },
-        "duration": {
-            "startDate": "2022-05-26",
-            "endDate": "2022-05-29"
-        },
-        "status": "completed",
-        "projectPurpose": "To plant 10,000 tree seedlings and promote sustainable environmental conservation practices through community participation and youth engagement.",
-        "objectives": [
-            "To promote local participation and sustainable use of the environment in Kakamega County.",
-            "To promote the culture of volunteerism and community service.",
-            "To enhance youth empowerment and development."
-        ],
-        "implementationApproach": {
-            "methodology": "Participatory community engagement model",
-            "volunteerInvolvement": {
-            "totalVolunteers": 120,
-            "sources": [
-                "Youths For Green Action Kenya",
-                "Masinde Muliro University of Science and Technology (MMUST)"
-            ]
-            },
-            "activities": [
-            "Tree planting",
-            "Environmental awareness campaigns",
-            "Capacity building workshop",
-            "Training on toner cartridge collection and handling",
-            "Community sensitization on sustainable development"
-            ]
-        },
-        "treePlantingStatistics": {
-            "totalSeedlingsPlanted": 10000,
-            "indigenousTrees": 4000,
-            "exoticTrees": 5700,
-            "fruitTrees": 300,
-            "siteBreakdown": [
-            {
-                "site": "Bondeni Primary School",
-                "treesPlanted": 1500,
-                "fruitTreesIncluded": true
-            },
-            {
-                "site": "Kambiri Community",
-                "treesPlanted": 5000,
-                "focus": "River restoration and indigenous tree replacement"
-            },
-            {
-                "site": "Shitoli Polytechnic",
-                "treesPlanted": 2000,
-                "fruitTreesIncluded": 100
-            },
-            {
-                "site": "St Jerome Savane Polytechnic",
-                "treesPlanted": 1500
-            }
-            ]
-        },
-        "partners": [
-            {
-            "name": "German Imaging Technologies (GIT)",
-            "role": "Funding and environmental training support",
-            "keyRepresentative": "Dr. Sassan Dieter Khatib-Shahidi"
-            },
-            {
-            "name": "Kakamega County Government",
-            "department": "Department of Environment",
-            "keyRepresentative": "Mr. Eugine Milimo Wamalwa"
-            },
-            {
-            "name": "National Environment Management Authority (NEMA)",
-            "keyRepresentative": "Mr. John Maniafu"
-            },
-            {
-            "name": "Masinde Muliro University of Science and Technology (MMUST)",
-            "keyRepresentative": "Mr. Oscar Waswa"
-            }
-        ],
-        "mediaCoverage": [
-            "Tandaza Radio",
-            "Luhya TV",
-            "KTN News",
-            "Radio Maisha",
-            "Standard Newspaper",
-            "Citizen TV",
-            "West FM",
-            "West TV",
-            "Nyota Radio",
-            "Nyota TV"
-        ],
-        "challengesExperienced": [
-            "Late booking of facilities threatened project preparation timelines.",
-            "Short project execution period limited operational flexibility."
-        ],
-        "impact": {
-            "environmentalImpact": "Contributed to increased tree cover and river restoration efforts.",
-            "communityImpact": "Enhanced environmental awareness and strengthened community participation.",
-            "cumulativeTreesPlantedByOrganization": 82000
-        },
-        "alignment": {
-            "sdg": ["SDG 13 - Climate Action"],
-            "nationalGoal": "Support Kenya’s target of achieving 10% forest cover."
-        },
-        "createdAt": "2022-05-30T10:00:00Z",
-        "updatedAt": "2022-05-30T10:00:00Z"
-        },
+       
         {
             "id": "proj_greening_schools_2025_phase1",
             "title": "Greening Schools Initiative – Phase One 2025",
@@ -344,7 +223,7 @@ export const initiatives = [
             "id": "proj_kakamega_gsi_phase3_2025",
             "title": "Greening Schools Initiative — Phase Three (Kakamega County) 2025",
             "slug": "greening-schools-initiative-phase-three-kakamega-2025",
-            "image": "/kakamega.jpg",
+            "image": "/gsi kakamega.jpeg",
             "theme": "School-based Reforestation",
             "projectTheme": "Future in a Million Trees – Kakamega School Greening",
             "description": "The third phase of Youths for Green Action Kenya's (YGAK) Greening Schools Initiative implemented in Kakamega Central Sub-County, Kakamega County, distributing and planting 30,000 tree seedlings across six schools. The initiative promoted environmental awareness, restored degraded school landscapes, and advanced climate action through school-based greening programs.",
@@ -426,5 +305,212 @@ export const initiatives = [
             },
             "createdAt": "2025-10-10T10:00:00Z",
             "updatedAt": "2025-10-10T10:00:00Z"
-        }
+        },
+        {
+            "id": "proj_naivasha_community_service_2019",
+            "title": "Naivasha Community Service Project 2019",
+            "slug": "naivasha-community-service-project-2019",
+            "image": "/naivasha.jpeg",
+            "theme": "Environmental Conservation and Community Development",
+            "projectTheme": "Taking a Holistic Approach Towards Green and Beautiful Naivasha",
+            "description": "A four-day youth-led community service initiative in Naivasha Sub-County focused on environmental conservation, waste management, tree planting, and blue economy awareness. The project combined practical community service, environmental education, and philanthropic activities to build resilient cities, promote sustainable development, and enhance youth capacity through hands-on experience and networking.",
+            "location": {
+            "country": "Kenya",
+            "county": "Nakuru",
+            "subCounties": ["Naivasha"],
+            "specificSites": [
+            "Naivasha Industrial Area",
+            "Unity Primary School",
+            "Millimani Primary School",
+            "Naivasha Safe House",
+            "Strong Towers Children’s Home",
+            "Naivasha Referral Hospital"
+            ]
+            },
+            "duration": {
+            "startDate": "2019-10-01",
+            "endDate": "2019-10-04"
+            },
+            "status": "completed",
+            "projectPurpose": "To enhance environmental conservation, promote sustainable waste management, strengthen community resilience, and empower youth to lead development initiatives in Naivasha.",
+            "objectives": [
+            "Promote tree planting and greening of schools, community spaces, and healthcare facilities.",
+            "Increase community awareness on solid waste management and blue economy sustainability.",
+            "Provide philanthropic support to local children’s homes and community centers.",
+            "Develop youth skills in leadership, teamwork, and environmental conservation."
+            ],
+            "implementationApproach": {
+            "methodology": "Youth-led participatory community service combining environmental education, tree planting, philanthropy, and capacity building.",
+            "volunteerInvolvement": {
+            "totalVolunteers": 77,
+            "sources": [
+            "Youths for Green Action Kenya volunteers",
+            "Maasai Mara University students",
+            "Other university student volunteers",
+            "Local community members and Red Cross youth groups",
+            "YMCA volunteers"
+            ]
+            },
+            "activities": [
+            "Sustainability workshop on youth leadership, climate action, and community service",
+            "Visits to children’s homes and safe houses for philanthropic support",
+            "Tree planting at primary schools and public institutions",
+            "Innovation and waste management study visits",
+            "Town clean-up and drainage clearing in Naivasha Industrial Area",
+            "Mental health and team-building sessions",
+            "Blue economy awareness and impact assessment",
+            "Closing activities and documentation"
+            ]
+            },
+            "treePlantingStatistics": {
+            "totalSeedlingsPlanted": 300,
+            "indigenousTrees": 300,
+            "exoticTrees": null,
+            "fruitTrees": null,
+            "siteBreakdown": [
+            {
+            "site": "Unity Primary School and Millimani Primary School",
+            "treesPlanted": 300
+            }
+            ]
+            },
+            "partners": [
+            {
+            "name": "Nakuru County Government",
+            "role": "Logistical support and community coordination"
+            },
+            {
+            "name": "National Environmental Management Authority (NEMA)",
+            "role": "Environmental education and technical guidance"
+            },
+            {
+            "name": "Kenya Forest Service (KFS)",
+            "role": "Technical support in tree planting and conservation"
+            },
+            {
+            "name": "Kenya Red Cross Youths – Naivasha Branch",
+            "role": "Community mobilization and volunteer participation"
+            },
+            {
+            "name": "Young Men Christian Association (YMCA)",
+            "role": "Workshop hosting, youth engagement, and logistical support"
+            },
+            {
+            "name": "Maasai Mara University Volunteers",
+            "role": "Student volunteer participation and environmental awareness"
+            }
+            ],
+            "mediaCoverage": [],
+            "challengesExperienced": [
+            "High initial planning and pre-visit costs including travel, printing, and communications.",
+            "Team accommodation expenses during project implementation.",
+            "Budget shortfalls affecting full realization of project objectives.",
+            "Documentation and publicity limitations, including brochures, banners, and media coverage.",
+            "Ensuring the survival and maintenance of trees planted in community spaces.",
+            "Sustaining long-term impact from clean-up and waste management activities."
+            ],
+            "impact": {
+            "environmentalImpact": "Planted 300 trees in schools and community spaces, promoted proper waste management, and enhanced blue economy awareness.",
+            "communityImpact": "Engaged local youth and community members in environmental stewardship, philanthropy, and team-building initiatives.",
+            "cumulativeTreesPlantedByOrganization": 5000
+            },
+            "alignment": {
+            "sdg": [
+            "SDG 11 - Sustainable Cities and Communities",
+            "SDG 13 - Climate Action",
+            "SDG 15 - Life on Land"
+            ],
+            "nationalGoal": "Support Kenya’s sustainable development and environmental conservation agenda at the county and community level."
+            },
+            "createdAt": "2019-10-05T10:00:00Z",
+            "updatedAt": "2019-10-05T10:00:00Z"
+        },
+        
+        // {
+        //     "id": "proj_kakamega_gsi_phase3_2025",
+        //     "title": "Greening Schools Initiative — Phase Three (Kakamega County) 2025",
+        //     "slug": "greening-schools-initiative-phase-three-kakamega-2025",
+        //     "image": "/kakamega.jpg",
+        //     "theme": "School-based Reforestation",
+        //     "projectTheme": "Future in a Million Trees – Kakamega School Greening",
+        //     "description": "The third phase of Youths for Green Action Kenya's (YGAK) Greening Schools Initiative implemented in Kakamega Central Sub-County, Kakamega County, distributing and planting 30,000 tree seedlings across six schools. The initiative promoted environmental awareness, restored degraded school landscapes, and advanced climate action through school-based greening programs.",
+        //     "location": {
+        //         "country": "Kenya",
+        //         "county": "Kakamega",
+        //         "subCounties": ["Kakamega Central"],
+        //         "specificSites": [
+        //             "Kakamega Primary & Junior Secondary School",
+        //             "Rosterman Primary & Junior Secondary School",
+        //             "Kakamega Boys High School",
+        //             "Kakamega County Polytechnic",
+        //             "Bishop Sulumeti Girls High School",
+        //             "Bondeni Primary School"
+        //         ]
+        //     },
+        //     "duration": {
+        //         "startDate": "2025-10-09",
+        //         "endDate": "2025-10-09"
+        //     },
+        //     "status": "completed",
+        //     "projectPurpose": "To increase tree cover in schools, instill environmental stewardship among learners, strengthen school-community partnerships, and contribute to Kenya’s broader climate action and reforestation goals.",
+        //     "objectives": [
+        //         "Distribute and plant 30,000 tree seedlings across six schools.",
+        //         "Integrate environmental education and climate awareness into school programs.",
+        //         "Strengthen collaboration between schools, communities, and environmental actors.",
+        //         "Support Kenya’s national reforestation and climate action initiatives."
+        //     ],
+        //     "implementationApproach": {
+        //         "methodology": "Youth-led participatory school greening program integrating tree planting, environmental education, and community engagement.",
+        //         "volunteerInvolvement": {
+        //             "totalVolunteers": 120,
+        //             "sources": [
+        //                 "Students and teachers from participating schools",
+        //                 "Local community members in Kakamega Central Sub-County",
+        //                 "Youth volunteers from Youths for Green Action Kenya chapters"
+        //             ]
+        //         },
+        //         "activities": [
+        //             "Distribution and planting of 30,000 tree seedlings",
+        //             "Environmental education sessions integrated into school programs",
+        //             "Community mobilization and awareness campaigns",
+        //             "Coordination with local administration and school leadership for logistical support"
+        //         ]
+        //     },
+        //     "treePlantingStatistics": {
+        //         "totalSeedlingsPlanted": 30000,
+        //         "indigenousTrees": 30000,
+        //         "exoticTrees": 0,
+        //         "fruitTrees": 0,
+        //         "siteBreakdown": [
+        //             {"site": "Kakamega Primary & Junior Secondary School", "treesPlanted": 5000, "species": ["Cyprus"]},
+        //             {"site": "Rosterman Primary & Junior Secondary School", "treesPlanted": 5000, "species": ["Cyprus"]},
+        //             {"site": "Kakamega Boys High School", "treesPlanted": 5000, "species": ["Grevillea", "Cyprus", "Bischofia"]},
+        //             {"site": "Kakamega County Polytechnic", "treesPlanted": 5000, "species": ["Cyprus"]},
+        //             {"site": "Bishop Sulumeti Girls High School", "treesPlanted": 5000, "species": ["Grevillea", "Cyprus", "Bischofia"]},
+        //             {"site": "Bondeni Primary School", "treesPlanted": 5000, "species": ["Cyprus"]}
+        //         ]
+        //     },
+        //     "partners": [
+        //         {"name": "German Imaging Technologies (GIT)", "role": "Financial donor and project patron"},
+        //         {"name": "The Design Gallery", "role": "Financial donor"},
+        //         {"name": "Victoria Furnitures Ltd", "role": "Financial donor"},
+        //         {"name": "Local school administrations", "role": "Logistical and administrative support"}
+        //     ],
+        //     "mediaCoverage": [],
+        //     "challengesExperienced": [
+        //         "Delays due to multi-layered administrative approval processes",
+        //         "Limited post-planting monitoring due to logistical and budget constraints"
+        //     ],
+        //     "impact": {
+        //         "environmentalImpact": "Planted 30,000 indigenous seedlings, improved school landscape biodiversity, and strengthened school-based environmental education.",
+        //         "communityImpact": "Engaged students, teachers, and community members in sustainable land restoration and environmental awareness, fostering a culture of stewardship.",
+        //         "cumulativeTreesPlantedByOrganization": 670000
+        //     },
+        //     "alignment": {
+        //         "sdg": ["SDG 13 - Climate Action", "SDG 15 - Life on Land"],
+        //         "nationalGoal": "Support Kenya’s climate action agenda and school-based reforestation programs."
+        //     },
+        //     "createdAt": "2025-10-10T10:00:00Z",
+        //     "updatedAt": "2025-10-10T10:00:00Z"
+        // }
     ]

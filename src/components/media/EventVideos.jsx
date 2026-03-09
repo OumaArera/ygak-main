@@ -3,36 +3,83 @@ import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, Loader2, Youtube } from "lucide-react";
 import { getData } from "../../services/apiService";
 
-// Sample placeholder videos grouped by event
+
 const sampleEventVideos = [
   {
     id: 1,
-    eventName: "National Tree Planting Day",
-    date: "2025-01-15",
+    eventName: "YGAK Greening Schools Initiative",
+    date: "2024",
     videos: [
-      "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      "https://www.youtube.com/embed/oHg5SJYRHA0",
-      "https://www.youtube.com/embed/3JZ_D3ELwOQ",
+      "https://www.youtube.com/embed/vNZaXwfO5ZM",
+      "https://www.youtube.com/embed/0T0KlUqdLs4",
     ],
   },
   {
     id: 2,
-    eventName: "Youth Climate Dialogue",
-    date: "2025-02-20",
+    eventName: "YGAK Greening Schools — Kakamega County",
+    date: "2023",
     videos: [
-      "https://www.youtube.com/embed/L_jWHffIx5E",
-      "https://www.youtube.com/embed/k85mRPqvMbE",
-      "https://www.youtube.com/embed/tgbNymZ7vqY",
+      "https://www.youtube.com/embed/oUXtStsVC1A",
+      "https://www.youtube.com/embed/XpRdaZEL0IU",
     ],
   },
   {
     id: 3,
-    eventName: "Green Innovation Hub Launch",
-    date: "2025-03-10",
+    eventName: "YGAK Kipkabus Forest Initiatives",
+    date: "2023-2024",
     videos: [
-      "https://www.youtube.com/embed/V-_O7nl0Ii0",
-      "https://www.youtube.com/embed/C0DPdy98e4c",
-      "https://www.youtube.com/embed/fJ9rUzIMcZQ",
+      "https://www.youtube.com/embed/e40VmS3hJDU",
+      "https://www.youtube.com/embed/bIh5REEfxIs",
+    ],
+  },
+  {
+    id: 4,
+    eventName: "YGAK 100,000 Trees Projects",
+    date: "2023",
+    videos: [
+      "https://www.youtube.com/embed/AGz8arBtpds",
+      "https://www.youtube.com/embed/pr18CCpL7eY",
+    ],
+  },
+  {
+    id: 5,
+    eventName: "YGAK Community Tree Planting & Impact",
+    date: "2024",
+    videos: [
+      "https://www.youtube.com/embed/sa-K4Awz2vE",
+    ],
+  },
+  {
+    id: 6,
+    eventName: "YGAK Wetland & Forest Restoration",
+    date: "2023-2024",
+    videos: [
+      "https://www.youtube.com/embed/P1kBGfvmwuw",
+      "https://www.youtube.com/embed/yDSgS166U0k",
+    ],
+  },
+  {
+    id: 7,
+    eventName: "YGAK Green Initiative 2025 Launch",
+    date: "2025",
+    videos: [
+      "https://www.youtube.com/embed/qZziMFZF2No",
+    ],
+  },
+  {
+    id: 8,
+    eventName: "YGAK 2023 Annual Dinner",
+    date: "2023",
+    videos: [
+      "https://www.youtube.com/embed/WVac3LSsR20",
+    ],
+  },
+  {
+    id: 9,
+    eventName: "YGAK 200,000 Trees Milestone",
+    date: "2023",
+    videos: [
+      "https://www.youtube.com/embed/0_J6GFQl28c",
     ],
   },
 ];

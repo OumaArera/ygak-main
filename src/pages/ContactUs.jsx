@@ -44,6 +44,10 @@ const ContactUs = () => {
               <span>+254 111 621 513</span>
             </div>
             <div className="flex items-center space-x-2">
+              <Phone className="text-[#1B5E20]" />
+              <span>+254 748 204 272</span>
+            </div>
+            <div className="flex items-center space-x-2">
               <Mail className="text-[#1B5E20]" />
               <span>info@ygak.org</span>
             </div>

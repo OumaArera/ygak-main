@@ -22,6 +22,21 @@ const donors = [
     logo: "/wwf.webp",
     url: "https://www.worldwildlife.org/",
   },
+  {
+    name: "GIT",
+    logo: "/GIT LOGO.png",
+    url: "https://www.git.com/",
+  },
+  {
+    name: "Victoria Furnitures",
+    logo: "/VICTORIA FURNITURES LOGO.png",
+    url: "https://www.victoriafurnitures.com/",
+  },
+  {
+    name: "The Design Gallery",
+    logo: "/THE DESIGN GALLERY LOGO.png",
+    url: "https://www.thedesigngallery.com/",
+  },
 ];
 
 const partners = [

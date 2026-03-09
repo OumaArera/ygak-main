@@ -38,6 +38,7 @@ import WhistleBlowerPolicy from './components/policies/WhistleBlowerPolicy';
 import SafeguardingPolicy from './components/policies/SafeguardingPolicy';
 import DonorAndPartnerStatement from './components/policies/DonorAndPartnerStatement';
 import InitiativeDetails from './components/projects/InitiativeDetails';
+// import Milestones from './components/events/Milestones';
 
 function App() {
   return (
@@ -69,7 +70,8 @@ function App() {
             <Route path="/media/newsletters" element={<Newsletters />} />
             <Route path="/media/photos" element={<EventPhotos />} />
             <Route path="/media/videos" element={<EventVideos />} />
-            <Route path="/activities/events" element={<Events />} />
+            {/* <Route path="/activities/events" element={<Events />} /> */}
+            {/* <Route path="/activities/milestones" element={<Milestones />} /> */}
             <Route path="/activities/events/:id" element={<EventDetails />} />
             <Route path="/resources/publications" element={<ResourceLibrary />} />
             <Route path="/get-involved/donate" element={<GetInvolved />} />
