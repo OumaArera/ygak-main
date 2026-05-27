@@ -69,6 +69,34 @@ const secretariat = [
       "Leads YGAK’s secretariat and day-to-day operations, driving program implementation, partnerships, and organizational growth under board guidance.",
     image: "/Dennis Asiya.jpg",
   },
+  {
+    name: "Mr. Phineas Munene",
+    role: "MEARL Officer",
+    description:
+      "Oversees Monitoring, Evaluation, Accountability, Research, and Learning (MEARL) functions at YGAK, ensuring data-driven program implementation, impact tracking, reporting, organizational learning, and continuous improvement of environmental and community initiatives.",
+    image: "/phineas.jpeg",
+  },
+  {
+    name: "Ms. Joan Cheruiyot",
+    role: "Communication and Advocacy Officer",
+    description:
+      "Leads YGAK’s communication and advocacy efforts by managing public engagement, storytelling, media relations, and awareness campaigns while amplifying the organization’s environmental initiatives, youth voices, and community impact.",
+    image: "/joan.jpeg",
+  },
+  {
+    name: "Mr. Saviour Shilaho",
+    role: "Volunteer and Chapter Coordinator",
+    description:
+      "Coordinates YGAK’s volunteer network and regional chapters by strengthening member engagement, supporting grassroots environmental initiatives, mobilizing youth participation, and fostering collaboration across communities to advance the organization’s mission and impact.",
+    image: "/saviour.jpeg",
+  },
+  {
+    name: "Mr. Michael Obiya",
+    role: "Administration and Finance Officer",
+    description:
+      "Oversees YGAK’s administrative and financial operations by ensuring effective resource management, financial accountability, budgeting, compliance, and organizational support to enhance efficient program implementation and sustainable growth.",
+    image: "/michael.jpeg",
+  },
 ];
 
 const LeadershipTeam = () => {
@@ -165,34 +193,51 @@ const LeadershipTeam = () => {
 
         {/* Secretariat */}
         <div>
-          <h3 className="text-2xl font-bold text-[#1c4b28] text-center mb-8">
+          <h3 className="text-2xl font-bold text-[#1c4b28] text-center mb-6">
             Secretariat
           </h3>
-          <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            The Secretariat leads YGAK’s operations, manages daily programs, and
-            implements strategic plans under the Board’s direction.
+
+          <p className="text-gray-600 text-center mb-14 max-w-3xl mx-auto leading-relaxed">
+            The Secretariat leads YGAK’s operations, manages daily programs,
+            and implements strategic plans under the Board’s direction.
           </p>
 
-          <div className="flex justify-center">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {secretariat.map((member, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white p-10 rounded-2xl shadow-xl hover:shadow-2xl transition text-center max-w-md"
+                className="group bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 p-6 text-center flex flex-col items-center border border-gray-100 hover:-translate-y-2"
               >
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-28 h-28 rounded-full object-cover mb-5 border-4 border-green-100 shadow-md mx-auto"
-                />
-                <h4 className="font-semibold text-xl text-[#1c4b28]">
+                {/* Image */}
+                <div className="relative mb-5">
+                  <div className="absolute inset-0 rounded-full bg-green-100 blur-md opacity-60 group-hover:opacity-100 transition"></div>
+
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="relative w-28 h-28 rounded-full object-cover border-4 border-green-100 shadow-md"
+                  />
+                </div>
+
+                {/* Name */}
+                <h4 className="text-xl font-bold text-[#1c4b28] leading-snug mb-1">
                   {member.name}
                 </h4>
-                <p className="text-green-700 text-sm mb-3">{member.role}</p>
-                <p className="text-gray-600 text-sm leading-relaxed">
+
+                {/* Role */}
+                <p className="text-green-700 font-medium text-sm mb-4 leading-snug min-h-[48px]">
+                  {member.role}
+                </p>
+
+                {/* Divider */}
+                <div className="w-12 h-1 bg-green-600 rounded-full mb-4"></div>
+
+                {/* Description */}
+                <p className="text-gray-600 text-sm leading-7 flex-grow">
                   {member.description}
                 </p>
               </motion.div>

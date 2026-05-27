@@ -1,5 +1,275 @@
 export const projects = [
         {
+            "id": "proj_baraget_forest_phase_one_2026",
+            "title": "Baraget Forest Tree Planting Campaign 2026 – Phase One",
+            "slug": "baraget-forest-tree-planting-campaign-2026-phase-one",
+            "image": "/baraget-day-1.jpg",
+            "theme": "Forest Restoration",
+            "projectTheme": "Community-Centered Forest Restoration and Climate Resilience at Baraget Forest",
+            "description": "A five-day forest restoration initiative implemented at Baraget Forest aimed at restoring degraded forest ecosystems, protecting riparian zones, and strengthening climate resilience through youth-led and community-centered environmental action. The campaign mobilized community members, government agencies, women and youth groups, and environmental stakeholders to plant 50,000 tree seedlings while promoting local ownership of sustainable forest management.",
+            "location": {
+                "country": "Kenya",
+                "county": "Nakuru",
+                "subCounties": [],
+                "specificSites": [
+                "Baraget Forest"
+                ]
+            },
+            "duration": {
+                "startDate": "2026-04-28",
+                "endDate": "2026-05-01"
+            },
+            "status": "completed",
+            "projectPurpose": "To restore forest cover and biodiversity within Baraget Forest, strengthen riparian ecosystem protection, enhance climate resilience, and foster community ownership in sustainable environmental stewardship.",
+            "objectives": [
+                "Restore degraded forest cover through large-scale tree planting.",
+                "Protect riparian ecosystems and improve biodiversity conservation.",
+                "Promote climate resilience through ecosystem restoration initiatives.",
+                "Strengthen partnerships between YGAK, communities, government agencies, and private sector partners.",
+                "Enhance local ownership and participation in environmental conservation efforts."
+            ],
+            "implementationApproach": {
+                "methodology": "Youth-led and community-centered participatory forest restoration integrating local community engagement, government collaboration, and ecosystem conservation practices.",
+                "volunteerInvolvement": {
+                "totalVolunteers": 100,
+                "sources": [
+                    "Local community members",
+                    "Community Forest Association (CFA)",
+                    "Women groups",
+                    "Youth groups",
+                    "Youths for Green Action Kenya (YGAK) team"
+                ]
+                },
+                "activities": [
+                "Official launch ceremony with government officials and forest stakeholders",
+                "Tree planting in designated restoration and riparian zones",
+                "Community mobilization and environmental stewardship engagement",
+                "Forest restoration coordination with KFS and CFA officials",
+                "Youth-led environmental conservation activities",
+                "Partnership engagement and logistical coordination"
+                ]
+            },
+            "treePlantingStatistics": {
+                "totalSeedlingsPlanted": 50000,
+                "indigenousTrees": 10000,
+                "exoticTrees": 40000,
+                "fruitTrees": 0,
+                "siteBreakdown": [
+                {
+                    "site": "Forest Restoration Blocks",
+                    "treesPlanted": 40000
+                },
+                {
+                    "site": "Riparian Restoration Zones",
+                    "treesPlanted": 10000
+                }
+                ]
+            },
+            "partners": [
+                {
+                "name": "German Imaging Technologies (GIT)",
+                "role": "Project sponsor and patron"
+                },
+                {
+                "name": "Victoria Furniture",
+                "role": "Project sponsor and patron"
+                },
+                {
+                "name": "The Design Gallery",
+                "role": "Project sponsor and patron"
+                },
+                {
+                "name": "Kenya Forest Service (KFS)",
+                "role": "Technical support, oversight, and forest restoration coordination"
+                },
+                {
+                "name": "Community Forest Association (CFA)",
+                "role": "Community mobilization and coordination"
+                },
+                {
+                "name": "Local Administration",
+                "role": "Government oversight and support"
+                }
+            ],
+            "mediaCoverage": [],
+            "challengesExperienced": [
+                "Terrain and accessibility challenges affected logistics and execution",
+                "Coordination of planting activities across restoration zones",
+                "Managing transportation and movement within forest areas"
+            ],
+            "impact": {
+                "environmentalImpact": "Restored approximately 20.2 hectares (49.9 acres) of Baraget Forest through the planting of 50,000 tree seedlings, improving forest regeneration, biodiversity conservation, riparian ecosystem protection, and long-term climate resilience.",
+                "communityImpact": "Engaged over 100 community members alongside women and youth groups, strengthening community ownership, environmental stewardship, and collaboration between local communities, government agencies, and environmental partners.",
+                "cumulativeTreesPlantedByOrganization": 505000
+            },
+            "alignment": {
+                "sdg": [
+                "SDG 13 - Climate Action",
+                "SDG 15 - Life on Land",
+                "SDG 17 - Partnerships for the Goals"
+                ],
+                "nationalGoal": "Support Kenya’s afforestation agenda and promote community-led forest restoration and environmental sustainability."
+            },
+            "createdAt": "2026-05-02T10:00:00Z",
+            "updatedAt": "2026-05-02T10:00:00Z"
+        },
+        {
+            "id": "proj_baraget_forest_phase_two_2026",
+            "title": "Baraget Forest Tree Planting Campaign 2026 – Phase Two",
+            "slug": "baraget-forest-tree-planting-campaign-2026-phase-two",
+            "image": "/baraget/phase two/baraget 4 phase 2.jpg",
+            "theme": "Forest Restoration",
+            "projectTheme": "Scaling Community-Led Forest Restoration and Climate Resilience at Baraget Forest",
+            "description": "A large-scale community-driven forest restoration initiative implemented at Baraget Forest as Phase Two of the Baraget Forest Reforestation Initiative. The campaign strengthened ecological restoration efforts within the Mau Forest Complex through collaborative participation by local communities, government agencies, academic institutions, media partners, and youth-led environmental groups. The initiative focused on biodiversity conservation, climate resilience, riparian ecosystem restoration, and long-term community ownership of forest conservation efforts.",
+            "location": {
+                "country": "Kenya",
+                "county": "Nakuru",
+                "subCounties": [],
+                "specificSites": [
+                "Baraget Forest",
+                "Mau Forest Complex"
+                ]
+            },
+            "duration": {
+                "startDate": "2026-05-15",
+                "endDate": "2026-05-17"
+            },
+            "status": "completed",
+            "projectPurpose": "To expand forest restoration coverage within Baraget Forest, restore degraded ecosystems and riparian zones, enhance biodiversity conservation and climate resilience, and strengthen sustainable community participation in environmental stewardship.",
+            "objectives": [
+                "Expand forest restoration coverage through large-scale tree planting.",
+                "Restore degraded forest sections and riparian ecosystems.",
+                "Enhance biodiversity conservation and climate resilience.",
+                "Promote sustainable community participation and ownership in forest conservation.",
+                "Strengthen collaboration between YGAK, government agencies, academic institutions, media, communities, and private sector partners."
+            ],
+            "implementationApproach": {
+                "methodology": "Community-centered and youth-led participatory forest restoration integrating stakeholder collaboration, ecosystem conservation, institutional partnerships, environmental awareness, and structured restoration planning.",
+                "volunteerInvolvement": {
+                "totalVolunteers": 150,
+                "sources": [
+                    "Local community members",
+                    "Community Forest Association (CFA)",
+                    "Women groups",
+                    "Youth groups",
+                    "Youths for Green Action Kenya (YGAK) team",
+                    "Kenya Forest Service (KFS)",
+                    "Egerton University representatives",
+                    "Kenya Meteorological Department officials"
+                ]
+                },
+                "activities": [
+                "Official launch and stakeholder engagement activities",
+                "Tree planting across degraded forest and riparian restoration zones",
+                "Community mobilization and environmental conservation engagement",
+                "Forest restoration coordination with KFS and CFA officers",
+                "Media coverage and environmental awareness campaigns",
+                "Institutional collaboration and logistical coordination",
+                "Volunteer supervision, orientation, and restoration implementation",
+                "Merchandise distribution and branding coordination",
+                "First aid and participant safety support services"
+                ]
+            },
+            "treePlantingStatistics": {
+                "totalSeedlingsPlanted": 50000,
+                "indigenousTrees": 5000,
+                "exoticTrees": 45000,
+                "fruitTrees": 0,
+                "siteBreakdown": [
+                {
+                    "site": "Forest Restoration Blocks",
+                    "treesPlanted": 45000
+                },
+                {
+                    "site": "Riparian and Ecologically Sensitive Zones",
+                    "treesPlanted": 5000
+                }
+                ]
+            },
+            "partners": [
+                {
+                "name": "German Imaging Technologies (GIT)",
+                "role": "Project sponsor and patron"
+                },
+                {
+                "name": "Victoria Furniture",
+                "role": "Project sponsor and patron"
+                },
+                {
+                "name": "The Design Gallery",
+                "role": "Project sponsor and patron"
+                },
+                {
+                "name": "Kenya Forest Service (KFS)",
+                "role": "Technical support, coordination, and restoration oversight"
+                },
+                {
+                "name": "Community Forest Association (CFA)",
+                "role": "Community mobilization and implementation support"
+                },
+                {
+                "name": "Egerton University",
+                "role": "Institutional participation and environmental engagement"
+                },
+                {
+                "name": "Kenya Meteorological Department",
+                "role": "Environmental awareness and stakeholder participation"
+                },
+                {
+                "name": "TV47",
+                "role": "Media coverage and environmental awareness"
+                },
+                {
+                "name": "NTV",
+                "role": "Media coverage and project documentation"
+                },
+                {
+                "name": "Kenya News Agency",
+                "role": "Media coverage and reporting"
+                },
+                {
+                "name": "People’s Daily Newspaper",
+                "role": "Media coverage and public awareness"
+                },
+                {
+                "name": "NEMA",
+                "role": "Environmental oversight and government collaboration"
+                },
+                {
+                "name": "Local Administration",
+                "role": "Government support and coordination"
+                }
+            ],
+            "mediaCoverage": [
+                "TV47",
+                "NTV",
+                "Kenya News Agency",
+                "People’s Daily Newspaper"
+            ],
+            "challengesExperienced": [
+                "Transportation and distribution of seedlings across difficult forest terrain.",
+                "Differences in volunteer experience levels requiring on-site orientation and supervision.",
+                "Terrain accessibility challenges affecting movement and coordination within planting zones.",
+                "Limited quantities of merchandise requiring prioritization during distribution.",
+                "Insufficient branding materials for adequate visibility across the event venue."
+            ],
+            "impact": {
+                "environmentalImpact": "Successfully planted 50,000 tree seedlings during Phase Two, contributing to a cumulative achievement of 100,000 trees planted under the Baraget Forest Reforestation Initiative and restoring approximately 110 acres of degraded forest ecosystem within the Mau Forest Complex.",
+                "communityImpact": "Strengthened collaboration among communities, government agencies, academic institutions, media partners, and environmental stakeholders while increasing local ownership, climate action awareness, and long-term commitment toward forest restoration and conservation.",
+                "cumulativeTreesPlantedByOrganization": 555000
+            },
+            "alignment": {
+                "sdg": [
+                "SDG 13 - Climate Action",
+                "SDG 15 - Life on Land",
+                "SDG 17 - Partnerships for the Goals"
+                ],
+                "nationalGoal": "Support Kenya’s afforestation and ecosystem restoration agenda through collaborative, community-led environmental conservation initiatives."
+            },
+            "createdAt": "2026-05-18T10:00:00Z",
+            "updatedAt": "2026-05-18T10:00:00Z"
+            },
+        {
         "id": "proj_kakamega_2022_001",
         "title": "Kakamega Tree Planting Project",
         "slug": "future-in-a-million-trees-kakamega-2022",
@@ -712,5 +982,6 @@ export const projects = [
             "createdAt": "2024-05-20T10:00:00Z",
             "updatedAt": "2024-05-20T10:00:00Z"
         },
+        
         
     ]

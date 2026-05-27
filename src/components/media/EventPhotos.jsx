@@ -6,6 +6,33 @@ import { getData } from "../../services/apiService";
 // Sample data: events with photos
 const sampleEventPhotos = [
   {
+    id: 11,
+    eventName: "Baraget Forest Tree Planting Campaign 2026 - Phase One",
+    date: "2026-04-18",
+    photos: [
+      "/baraget/phase one/baraget 1 phase one.jpg",
+      "/baraget/phase one/baraget 2 phase one.jpg",
+      "/baraget/phase one/baraget 3 phase one.jpg",
+      "/baraget/phase one/baraget 4 phase one.jpg",
+      "/baraget/phase one/baraget 5 phase one.jpg"
+    ],
+    googlePhotosUrl: "https://cahilshots.pixieset.com/ygakbaragetforestday1/",
+  },
+  {
+    id: 12,
+    eventName: "Baraget Forest Tree Planting Campaign 2026 - Phase Two",
+    date: "2026-06-18",
+    photos: [
+      "/baraget/phase two/baraget 1 phase 2.jpg",
+      "/baraget/phase two/baraget 2 phase 2.jpg",
+      "/baraget/phase two/baraget 3 phase 2.jpg",
+      "/baraget/phase two/baraget 4 phase 2.jpg",
+      "/baraget/phase two/baraget 5 phase 2.jpg",
+      "/baraget/phase two/baraget 6 phase 2.jpg",
+    ],
+    googlePhotosUrl: "https://shots40.pixieset.com/baragetphaseii-1/",
+  },
+  {
     id: 1,
     eventName: "Kipkabus Project 2025",
     date: "2025-01-15",
@@ -116,6 +143,7 @@ const sampleEventPhotos = [
     ],
     googlePhotosUrl: "https://photos.app.goo.gl/YwekCxuk6pSMmGuT9",
   },
+  
   
 ];
 

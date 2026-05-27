@@ -156,6 +156,10 @@ const Footer = () => {
               <span>+254 111 621 513 (Phone & WhatsApp)</span>
             </li>
             <li className="flex items-start space-x-2">
+              <Phone size={18} className="mt-1 text-yellow-300" />
+              <span>+254 748 204 272 (Phone & WhatsApp)</span>
+            </li>
+            <li className="flex items-start space-x-2">
               <Mail size={18} className="mt-1 text-yellow-300" />
               <span>info@ygak.org</span>
             </li>
