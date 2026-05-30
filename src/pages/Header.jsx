@@ -48,7 +48,7 @@ const Header = () => {
       name: "Media Center",
       base: "/media",
       subItems: [
-        { name: "Press", path: "/press" },
+        { name: "Newsroom", path: "/newsroom" },
         { name: "Newsletters", path: "/newsletters" },
         { name: "Photos", path: "/photos" },
         { name: "Videos", path: "/videos" },

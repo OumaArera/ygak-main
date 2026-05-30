@@ -66,7 +66,7 @@ function App() {
             <Route path="/activities/projects/:id" element={<ProjectDetails />} />
             <Route path="/activities/initiatives/:id" element={<InitiativeDetails />} />
             <Route path="/media" element={<MediaCenter />} />
-            <Route path="/media/press/" element={<Press />} />
+            <Route path="/media/newsroom/" element={<Press />} />
             <Route path="/media/newsletters" element={<Newsletters />} />
             <Route path="/media/photos" element={<EventPhotos />} />
             <Route path="/media/videos" element={<EventVideos />} />
